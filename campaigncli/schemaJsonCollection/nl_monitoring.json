@@ -1,0 +1,173 @@
+{
+    "schema": "nl:monitoring",
+    "targetNamespace": "urn:nl:monitoring",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nl:monitoring",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "DumpInstanceState": {
+            "kind": "static",
+            "soapAction": "nl:monitoring#DumpInstanceState",
+            "input": {
+                "message": "DumpInstanceStateIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strMask",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bIncludeDead",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "DumpInstanceState"
+            },
+            "output": {
+                "message": "DumpInstanceStateOut",
+                "parameters": [
+                    {
+                        "name": "pelemMonitoring",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DumpInstanceStateResponse"
+            }
+        },
+        "DumpInstanceStateEx": {
+            "kind": "static",
+            "soapAction": "nl:monitoring#DumpInstanceStateEx",
+            "input": {
+                "message": "DumpInstanceStateExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strMask",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bIncludeDead",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "bNoDatabaseCheck",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "lCriticalLevel",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "DumpInstanceStateEx"
+            },
+            "output": {
+                "message": "DumpInstanceStateExOut",
+                "parameters": [
+                    {
+                        "name": "pelemMonitoring",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DumpInstanceStateExResponse"
+            }
+        },
+        "DumpCurrentInstanceState": {
+            "kind": "static",
+            "soapAction": "nl:monitoring#DumpCurrentInstanceState",
+            "input": {
+                "message": "DumpCurrentInstanceStateIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DumpCurrentInstanceState"
+            },
+            "output": {
+                "message": "DumpCurrentInstanceStateOut",
+                "parameters": [
+                    {
+                        "name": "pelemMonitoring",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DumpCurrentInstanceStateResponse"
+            }
+        },
+        "DumpArchivingStatus": {
+            "kind": "static",
+            "soapAction": "nl:monitoring#DumpArchivingStatus",
+            "input": {
+                "message": "DumpArchivingStatusIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DumpArchivingStatus"
+            },
+            "output": {
+                "message": "DumpArchivingStatusOut",
+                "parameters": [
+                    {
+                        "name": "pelemMonitoring",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DumpArchivingStatusResponse"
+            }
+        },
+        "GetMissingProcesses": {
+            "kind": "static",
+            "soapAction": "nl:monitoring#GetMissingProcesses",
+            "input": {
+                "message": "GetMissingProcessesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetMissingProcesses"
+            },
+            "output": {
+                "message": "GetMissingProcessesOut",
+                "parameters": [
+                    {
+                        "name": "pelemProcessList",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetMissingProcessesResponse"
+            }
+        }
+    }
+}

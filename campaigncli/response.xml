@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+<SOAP-ENV:Envelope xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:ns='urn:xtk:builder'
+    xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/'>
+    <SOAP-ENV:Body>
+        <GenerateSchemaResponse xmlns='urn:xtk:builder'
+            SOAP-ENV:encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'>
+            <pdomSchema xsi:type='ns:Element'
+                SOAP-ENV:encodingStyle='http://xml.apache.org/xml-soap/literalxml'>
+                <srcSchema label="test from cli" name="testTbA" namespace="mma"
+                    xtkschema="xtk:srcSchema">
+
+                    <element label="test from cli" name="testTbA" />
+                </srcSchema>
+            </pdomSchema>
+        </GenerateSchemaResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

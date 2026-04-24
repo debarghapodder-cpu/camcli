@@ -1,0 +1,648 @@
+{
+    "schema": "nms:webApp",
+    "targetNamespace": "urn:nms:webApp",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:webApp",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "GetSourceAsHtml": {
+            "kind": "static",
+            "soapAction": "nms:webApp#GetSourceAsHtml",
+            "input": {
+                "message": "GetSourceAsHtmlIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemForm",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strRenderer",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetSourceAsHtml"
+            },
+            "output": {
+                "message": "GetSourceAsHtmlOut",
+                "parameters": [
+                    {
+                        "name": "pstrSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pelemLogs",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetSourceAsHtmlResponse"
+            }
+        },
+        "GetSource": {
+            "kind": "static",
+            "soapAction": "nms:webApp#GetSource",
+            "input": {
+                "message": "GetSourceIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFormId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTarget",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bCompiled",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "strVersion",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetSource"
+            },
+            "output": {
+                "message": "GetSourceOut",
+                "parameters": [
+                    {
+                        "name": "pstrSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pelemLogs",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetSourceResponse"
+            }
+        },
+        "GetInputValues": {
+            "kind": "static",
+            "soapAction": "nms:webApp#GetInputValues",
+            "input": {
+                "message": "GetInputValuesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemInput",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetInputValues"
+            },
+            "output": {
+                "message": "GetInputValuesOut",
+                "parameters": [
+                    {
+                        "name": "pelemOptions",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetInputValuesResponse"
+            }
+        },
+        "FillSteps": {
+            "kind": "static",
+            "soapAction": "nms:webApp#FillSteps",
+            "input": {
+                "message": "FillStepsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExpr",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lClassCount",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "FillSteps"
+            },
+            "output": {
+                "message": "FillStepsOut",
+                "parameters": [
+                    {
+                        "name": "pelemSamplingSteps",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "FillStepsResponse"
+            }
+        },
+        "FillStepsWithFilter": {
+            "kind": "static",
+            "soapAction": "nms:webApp#FillStepsWithFilter",
+            "input": {
+                "message": "FillStepsWithFilterIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExpr",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lClassCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "elemFilter",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "FillStepsWithFilter"
+            },
+            "output": {
+                "message": "FillStepsWithFilterOut",
+                "parameters": [
+                    {
+                        "name": "pelemSamplingSteps",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "FillStepsWithFilterResponse"
+            }
+        },
+        "SelectTopValues": {
+            "kind": "static",
+            "soapAction": "nms:webApp#SelectTopValues",
+            "input": {
+                "message": "SelectTopValuesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExpr",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lClassCount",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SelectTopValues"
+            },
+            "output": {
+                "message": "SelectTopValuesOut",
+                "parameters": [
+                    {
+                        "name": "pelemSelectedValues",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SelectTopValuesResponse"
+            }
+        },
+        "Publish": {
+            "kind": "static",
+            "soapAction": "nms:webApp#Publish",
+            "input": {
+                "message": "PublishIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "btAppState",
+                        "type": "byte",
+                        "required": true
+                    }
+                ],
+                "element": "Publish"
+            },
+            "output": {
+                "message": "PublishOut",
+                "parameters": [],
+                "element": "PublishResponse"
+            }
+        },
+        "DictionaryCheck": {
+            "kind": "static",
+            "soapAction": "nms:webApp#DictionaryCheck",
+            "input": {
+                "message": "DictionaryCheckIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DictionaryCheck"
+            },
+            "output": {
+                "message": "DictionaryCheckOut",
+                "parameters": [
+                    {
+                        "name": "pelemStats",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DictionaryCheckResponse"
+            }
+        },
+        "DictionaryImport": {
+            "kind": "static",
+            "soapAction": "nms:webApp#DictionaryImport",
+            "input": {
+                "message": "DictionaryImportIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFileName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DictionaryImport"
+            },
+            "output": {
+                "message": "DictionaryImportOut",
+                "parameters": [],
+                "element": "DictionaryImportResponse"
+            }
+        },
+        "DictionaryExport": {
+            "kind": "static",
+            "soapAction": "nms:webApp#DictionaryExport",
+            "input": {
+                "message": "DictionaryExportIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "sExportOption",
+                        "type": "short",
+                        "required": true
+                    },
+                    {
+                        "name": "strExportFormat",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DictionaryExport"
+            },
+            "output": {
+                "message": "DictionaryExportOut",
+                "parameters": [
+                    {
+                        "name": "pelemFiles",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DictionaryExportResponse"
+            }
+        },
+        "ScanResources": {
+            "kind": "static",
+            "soapAction": "nms:webApp#ScanResources",
+            "input": {
+                "message": "ScanResourcesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWebApp",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ScanResources"
+            },
+            "output": {
+                "message": "ScanResourcesOut",
+                "parameters": [
+                    {
+                        "name": "pelemResources",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ScanResourcesResponse"
+            }
+        },
+        "GenerateSchema": {
+            "kind": "static",
+            "soapAction": "nms:webApp#GenerateSchema",
+            "input": {
+                "message": "GenerateSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWebAppId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateSchema"
+            },
+            "output": {
+                "message": "GenerateSchemaOut",
+                "parameters": [],
+                "element": "GenerateSchemaResponse"
+            }
+        },
+        "RemoveLog": {
+            "kind": "static",
+            "soapAction": "nms:webApp#RemoveLog",
+            "input": {
+                "message": "RemoveLogIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "webAppLogList",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "RemoveLog"
+            },
+            "output": {
+                "message": "RemoveLogOut",
+                "parameters": [],
+                "element": "RemoveLogResponse"
+            }
+        },
+        "NormalizeField": {
+            "kind": "static",
+            "soapAction": "nms:webApp#NormalizeField",
+            "input": {
+                "message": "NormalizeFieldIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "selectedWebApp",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "archivedField",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "newSQLName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tableName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "schemaId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "rename",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "NormalizeField"
+            },
+            "output": {
+                "message": "NormalizeFieldOut",
+                "parameters": [],
+                "element": "NormalizeFieldResponse"
+            }
+        },
+        "RemoveUnusedField": {
+            "kind": "static",
+            "soapAction": "nms:webApp#RemoveUnusedField",
+            "input": {
+                "message": "RemoveUnusedFieldIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "RemoveUnusedField"
+            },
+            "output": {
+                "message": "RemoveUnusedFieldOut",
+                "parameters": [],
+                "element": "RemoveUnusedFieldResponse"
+            }
+        },
+        "InvalidateWebAppCache": {
+            "kind": "static",
+            "soapAction": "nms:webApp#InvalidateWebAppCache",
+            "input": {
+                "message": "InvalidateWebAppCacheIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "InvalidateWebAppCache"
+            },
+            "output": {
+                "message": "InvalidateWebAppCacheOut",
+                "parameters": [],
+                "element": "InvalidateWebAppCacheResponse"
+            }
+        },
+        "GetUsedLanguagesEnum": {
+            "kind": "static",
+            "soapAction": "nms:webApp#GetUsedLanguagesEnum",
+            "input": {
+                "message": "GetUsedLanguagesEnumIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDesignLanguage",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDefaultLanguage",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemAdditionalLanguages",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetUsedLanguagesEnum"
+            },
+            "output": {
+                "message": "GetUsedLanguagesEnumOut",
+                "parameters": [
+                    {
+                        "name": "pelemEnum",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetUsedLanguagesEnumResponse"
+            }
+        },
+        "DeleteWebApp": {
+            "kind": "static",
+            "soapAction": "nms:webApp#DeleteWebApp",
+            "input": {
+                "message": "DeleteWebAppIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DeleteWebApp"
+            },
+            "output": {
+                "message": "DeleteWebAppOut",
+                "parameters": [],
+                "element": "DeleteWebAppResponse"
+            }
+        }
+    }
+}

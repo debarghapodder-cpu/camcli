@@ -1,0 +1,427 @@
+{
+    "schema": "xtk:queryDef",
+    "targetNamespace": "urn:xtk:queryDef",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:queryDef",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "SelectAll": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#SelectAll",
+            "input": {
+                "message": "SelectAllIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bDuplicate",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "SelectAll"
+            },
+            "output": {
+                "message": "SelectAllOut",
+                "parameters": [],
+                "element": "SelectAllResponse"
+            }
+        },
+        "ExecuteQuery": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#ExecuteQuery",
+            "input": {
+                "message": "ExecuteQueryIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteQuery"
+            },
+            "output": {
+                "message": "ExecuteQueryOut",
+                "parameters": [
+                    {
+                        "name": "pdomOutput",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteQueryResponse"
+            }
+        },
+        "ExecuteQueryOnDataSource": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#ExecuteQueryOnDataSource",
+            "input": {
+                "message": "ExecuteQueryOnDataSourceIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strElement",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDataSource",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteQueryOnDataSource"
+            },
+            "output": {
+                "message": "ExecuteQueryOnDataSourceOut",
+                "parameters": [
+                    {
+                        "name": "pdomOutput",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteQueryOnDataSourceResponse"
+            }
+        },
+        "ExecuteQueryWithSnowflakeFunction": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#ExecuteQueryWithSnowflakeFunction",
+            "input": {
+                "message": "ExecuteQueryWithSnowflakeFunctionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strElement",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSqltable",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteQueryWithSnowflakeFunction"
+            },
+            "output": {
+                "message": "ExecuteQueryWithSnowflakeFunctionOut",
+                "parameters": [
+                    {
+                        "name": "pdomOutput",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteQueryWithSnowflakeFunctionResponse"
+            }
+        },
+        "GetInstanceFromModel": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#GetInstanceFromModel",
+            "input": {
+                "message": "GetInstanceFromModelIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetInstanceFromModel"
+            },
+            "output": {
+                "message": "GetInstanceFromModelOut",
+                "parameters": [
+                    {
+                        "name": "pdomOutput",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetInstanceFromModelResponse"
+            }
+        },
+        "CreateInstanceFromModel": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#CreateInstanceFromModel",
+            "input": {
+                "message": "CreateInstanceFromModelIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lModelId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "elemDiff",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CreateInstanceFromModel"
+            },
+            "output": {
+                "message": "CreateInstanceFromModelOut",
+                "parameters": [
+                    {
+                        "name": "plOutput",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "CreateInstanceFromModelResponse"
+            }
+        },
+        "BuildQuery": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#BuildQuery",
+            "input": {
+                "message": "BuildQueryIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildQuery"
+            },
+            "output": {
+                "message": "BuildQueryOut",
+                "parameters": [
+                    {
+                        "name": "pstrSql",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BuildQueryResponse"
+            }
+        },
+        "BuildQueryEx": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#BuildQueryEx",
+            "input": {
+                "message": "BuildQueryExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildQueryEx"
+            },
+            "output": {
+                "message": "BuildQueryExOut",
+                "parameters": [
+                    {
+                        "name": "pstrSql",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrFormat",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BuildQueryExResponse"
+            }
+        },
+        "Update": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#Update",
+            "input": {
+                "message": "UpdateIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContext",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Update"
+            },
+            "output": {
+                "message": "UpdateOut",
+                "parameters": [],
+                "element": "UpdateResponse"
+            }
+        },
+        "EvaluateExpr": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#EvaluateExpr",
+            "input": {
+                "message": "EvaluateExprIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExpr",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EvaluateExpr"
+            },
+            "output": {
+                "message": "EvaluateExprOut",
+                "parameters": [
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EvaluateExprResponse"
+            }
+        },
+        "DisplayCondition": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#DisplayCondition",
+            "input": {
+                "message": "DisplayConditionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DisplayCondition"
+            },
+            "output": {
+                "message": "DisplayConditionOut",
+                "parameters": [
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DisplayConditionResponse"
+            }
+        },
+        "GetXmlStruct": {
+            "kind": "static",
+            "soapAction": "xtk:queryDef#GetXmlStruct",
+            "input": {
+                "message": "GetXmlStructIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetXmlStruct"
+            },
+            "output": {
+                "message": "GetXmlStructOut",
+                "parameters": [],
+                "element": "GetXmlStructResponse"
+            }
+        }
+    }
+}

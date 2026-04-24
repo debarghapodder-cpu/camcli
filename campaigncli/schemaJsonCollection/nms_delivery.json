@@ -1,0 +1,2268 @@
+{
+    "schema": "nms:delivery",
+    "targetNamespace": "urn:nms:delivery",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:delivery",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "PrepareTargetImpl": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareTargetImpl",
+            "input": {
+                "message": "PrepareTargetImplIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareTargetImpl"
+            },
+            "output": {
+                "message": "PrepareTargetImplOut",
+                "parameters": [],
+                "element": "PrepareTargetImplResponse"
+            }
+        },
+        "PrepareMessageImpl": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareMessageImpl",
+            "input": {
+                "message": "PrepareMessageImplIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareMessageImpl"
+            },
+            "output": {
+                "message": "PrepareMessageImplOut",
+                "parameters": [],
+                "element": "PrepareMessageImplResponse"
+            }
+        },
+        "PrepareTarget": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareTarget",
+            "input": {
+                "message": "PrepareTargetIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareTarget"
+            },
+            "output": {
+                "message": "PrepareTargetOut",
+                "parameters": [],
+                "element": "PrepareTargetResponse"
+            }
+        },
+        "PrioritizeTarget": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrioritizeTarget",
+            "input": {
+                "message": "PrioritizeTargetIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PrioritizeTarget"
+            },
+            "output": {
+                "message": "PrioritizeTargetOut",
+                "parameters": [],
+                "element": "PrioritizeTargetResponse"
+            }
+        },
+        "PrepareMessage": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareMessage",
+            "input": {
+                "message": "PrepareMessageIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareMessage"
+            },
+            "output": {
+                "message": "PrepareMessageOut",
+                "parameters": [],
+                "element": "PrepareMessageResponse"
+            }
+        },
+        "Prepare": {
+            "kind": "static",
+            "soapAction": "nms:delivery#Prepare",
+            "input": {
+                "message": "PrepareIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Prepare"
+            },
+            "output": {
+                "message": "PrepareOut",
+                "parameters": [],
+                "element": "PrepareResponse"
+            }
+        },
+        "PrepareAndStart": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareAndStart",
+            "input": {
+                "message": "PrepareAndStartIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareAndStart"
+            },
+            "output": {
+                "message": "PrepareAndStartOut",
+                "parameters": [],
+                "element": "PrepareAndStartResponse"
+            }
+        },
+        "PrepareNotification": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareNotification",
+            "input": {
+                "message": "PrepareNotificationIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareNotification"
+            },
+            "output": {
+                "message": "PrepareNotificationOut",
+                "parameters": [],
+                "element": "PrepareNotificationResponse"
+            }
+        },
+        "PrepareProof": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareProof",
+            "input": {
+                "message": "PrepareProofIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bBStart",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareProof"
+            },
+            "output": {
+                "message": "PrepareProofOut",
+                "parameters": [],
+                "element": "PrepareProofResponse"
+            }
+        },
+        "PrepareFromId": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareFromId",
+            "input": {
+                "message": "PrepareFromIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDeliveryId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareFromId"
+            },
+            "output": {
+                "message": "PrepareFromIdOut",
+                "parameters": [],
+                "element": "PrepareFromIdResponse"
+            }
+        },
+        "HtmlToText": {
+            "kind": "static",
+            "soapAction": "nms:delivery#HtmlToText",
+            "input": {
+                "message": "HtmlToTextIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strHtmlContent",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "HtmlToText"
+            },
+            "output": {
+                "message": "HtmlToTextOut",
+                "parameters": [
+                    {
+                        "name": "pstrTextContent",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "HtmlToTextResponse"
+            }
+        },
+        "DiagnoseHTML": {
+            "kind": "static",
+            "soapAction": "nms:delivery#DiagnoseHTML",
+            "input": {
+                "message": "DiagnoseHTMLIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strHtmlContent",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "btFormat",
+                        "type": "byte",
+                        "required": true
+                    }
+                ],
+                "element": "DiagnoseHTML"
+            },
+            "output": {
+                "message": "DiagnoseHTMLOut",
+                "parameters": [
+                    {
+                        "name": "pdomDiagnostic",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DiagnoseHTMLResponse"
+            }
+        },
+        "Play": {
+            "kind": "static",
+            "soapAction": "nms:delivery#Play",
+            "input": {
+                "message": "PlayIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDeliveryId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Play"
+            },
+            "output": {
+                "message": "PlayOut",
+                "parameters": [],
+                "element": "PlayResponse"
+            }
+        },
+        "Pause": {
+            "kind": "static",
+            "soapAction": "nms:delivery#Pause",
+            "input": {
+                "message": "PauseIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDeliveryId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Pause"
+            },
+            "output": {
+                "message": "PauseOut",
+                "parameters": [],
+                "element": "PauseResponse"
+            }
+        },
+        "Stop": {
+            "kind": "static",
+            "soapAction": "nms:delivery#Stop",
+            "input": {
+                "message": "StopIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDeliveryId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Stop"
+            },
+            "output": {
+                "message": "StopOut",
+                "parameters": [],
+                "element": "StopResponse"
+            }
+        },
+        "LaunchFCP": {
+            "kind": "static",
+            "soapAction": "nms:delivery#LaunchFCP",
+            "input": {
+                "message": "LaunchFCPIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "LaunchFCP"
+            },
+            "output": {
+                "message": "LaunchFCPOut",
+                "parameters": [],
+                "element": "LaunchFCPResponse"
+            }
+        },
+        "LoadExpandedContents": {
+            "kind": "static",
+            "soapAction": "nms:delivery#LoadExpandedContents",
+            "input": {
+                "message": "LoadExpandedContentsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strIds",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "LoadExpandedContents"
+            },
+            "output": {
+                "message": "LoadExpandedContentsOut",
+                "parameters": [
+                    {
+                        "name": "pdomMaterial",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "LoadExpandedContentsResponse"
+            }
+        },
+        "BuildPreviewFromId": {
+            "kind": "static",
+            "soapAction": "nms:delivery#BuildPreviewFromId",
+            "input": {
+                "message": "BuildPreviewFromIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "domParams",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildPreviewFromId"
+            },
+            "output": {
+                "message": "BuildPreviewFromIdOut",
+                "parameters": [
+                    {
+                        "name": "pdomPreview",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pdomQueryResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildPreviewFromIdResponse"
+            }
+        },
+        "BuildPreview": {
+            "kind": "static",
+            "soapAction": "nms:delivery#BuildPreview",
+            "input": {
+                "message": "BuildPreviewIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "domParams",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildPreview"
+            },
+            "output": {
+                "message": "BuildPreviewOut",
+                "parameters": [
+                    {
+                        "name": "pdomPreview",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pdomQueryResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildPreviewResponse"
+            }
+        },
+        "SaveUrlInfo": {
+            "kind": "static",
+            "soapAction": "nms:delivery#SaveUrlInfo",
+            "input": {
+                "message": "SaveUrlInfoIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domInsUrlList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "domUpdUrlList",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SaveUrlInfo"
+            },
+            "output": {
+                "message": "SaveUrlInfoOut",
+                "parameters": [],
+                "element": "SaveUrlInfoResponse"
+            }
+        },
+        "GetFilesToDownload": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetFilesToDownload",
+            "input": {
+                "message": "GetFilesToDownloadIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "GetFilesToDownload"
+            },
+            "output": {
+                "message": "GetFilesToDownloadOut",
+                "parameters": [
+                    {
+                        "name": "pdomFilesToDownload",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pdomFilesNotToDownload",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetFilesToDownloadResponse"
+            }
+        },
+        "UpdateImageConfig": {
+            "kind": "static",
+            "soapAction": "nms:delivery#UpdateImageConfig",
+            "input": {
+                "message": "UpdateImageConfigIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pdomImageConfig",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateImageConfig"
+            },
+            "output": {
+                "message": "UpdateImageConfigOut",
+                "parameters": [
+                    {
+                        "name": "pdomImageConfig",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateImageConfigResponse"
+            }
+        },
+        "GetDlStatusAndLogs": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetDlStatusAndLogs",
+            "input": {
+                "message": "GetDlStatusAndLogsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lLastLogId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "GetDlStatusAndLogs"
+            },
+            "output": {
+                "message": "GetDlStatusAndLogsOut",
+                "parameters": [
+                    {
+                        "name": "psDeliveryState",
+                        "type": "short",
+                        "required": true
+                    },
+                    {
+                        "name": "pelemReturnLogs",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDlStatusAndLogsResponse"
+            }
+        },
+        "CollectLogs": {
+            "kind": "static",
+            "soapAction": "nms:delivery#CollectLogs",
+            "input": {
+                "message": "CollectLogsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "elemDeliveries",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strLogTable",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CollectLogs"
+            },
+            "output": {
+                "message": "CollectLogsOut",
+                "parameters": [],
+                "element": "CollectLogsResponse"
+            }
+        },
+        "PrioritizeLogs": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrioritizeLogs",
+            "input": {
+                "message": "PrioritizeLogsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "elemDeliveries",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strLogTable",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "PrioritizeLogs"
+            },
+            "output": {
+                "message": "PrioritizeLogsOut",
+                "parameters": [],
+                "element": "PrioritizeLogsResponse"
+            }
+        },
+        "ExecuteJob": {
+            "kind": "static",
+            "soapAction": "nms:delivery#ExecuteJob",
+            "input": {
+                "message": "ExecuteJobIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strMethodName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteJob"
+            },
+            "output": {
+                "message": "ExecuteJobOut",
+                "parameters": [],
+                "element": "ExecuteJobResponse"
+            }
+        },
+        "SubmitJob": {
+            "kind": "static",
+            "soapAction": "nms:delivery#SubmitJob",
+            "input": {
+                "message": "SubmitJobIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strMethodName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitJob"
+            },
+            "output": {
+                "message": "SubmitJobOut",
+                "parameters": [],
+                "element": "SubmitJobResponse"
+            }
+        },
+        "SubmitDelivery": {
+            "kind": "static",
+            "soapAction": "nms:delivery#SubmitDelivery",
+            "input": {
+                "message": "SubmitDeliveryIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strScenarioName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitDelivery"
+            },
+            "output": {
+                "message": "SubmitDeliveryOut",
+                "parameters": [
+                    {
+                        "name": "plDeliveryId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitDeliveryResponse"
+            }
+        },
+        "SubmitNotification": {
+            "kind": "static",
+            "soapAction": "nms:delivery#SubmitNotification",
+            "input": {
+                "message": "SubmitNotificationIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strScenarioName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemTarget",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitNotification"
+            },
+            "output": {
+                "message": "SubmitNotificationOut",
+                "parameters": [
+                    {
+                        "name": "plNotificationId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitNotificationResponse"
+            }
+        },
+        "CreateFromModel": {
+            "kind": "static",
+            "soapAction": "nms:delivery#CreateFromModel",
+            "input": {
+                "message": "CreateFromModelIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strScenarioName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CreateFromModel"
+            },
+            "output": {
+                "message": "CreateFromModelOut",
+                "parameters": [
+                    {
+                        "name": "pdomDelivery",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CreateFromModelResponse"
+            }
+        },
+        "SubmitDeliveryById": {
+            "kind": "static",
+            "soapAction": "nms:delivery#SubmitDeliveryById",
+            "input": {
+                "message": "SubmitDeliveryByIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lScenarioId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitDeliveryById"
+            },
+            "output": {
+                "message": "SubmitDeliveryByIdOut",
+                "parameters": [
+                    {
+                        "name": "plDeliveryId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitDeliveryByIdResponse"
+            }
+        },
+        "QueueNotification": {
+            "kind": "static",
+            "soapAction": "nms:delivery#QueueNotification",
+            "input": {
+                "message": "QueueNotificationIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strScenarioName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemTarget",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "QueueNotification"
+            },
+            "output": {
+                "message": "QueueNotificationOut",
+                "parameters": [],
+                "element": "QueueNotificationResponse"
+            }
+        },
+        "BuildMirror": {
+            "kind": "static",
+            "soapAction": "nms:delivery#BuildMirror",
+            "input": {
+                "message": "BuildMirrorIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strCrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BuildMirror"
+            },
+            "output": {
+                "message": "BuildMirrorOut",
+                "parameters": [
+                    {
+                        "name": "pstrContent",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "plResponseCode",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "BuildMirrorResponse"
+            }
+        },
+        "BuildMirrorEx": {
+            "kind": "static",
+            "soapAction": "nms:delivery#BuildMirrorEx",
+            "input": {
+                "message": "BuildMirrorExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strCrypted",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildMirrorEx"
+            },
+            "output": {
+                "message": "BuildMirrorExOut",
+                "parameters": [
+                    {
+                        "name": "pstrContent",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "plResponseCode",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "BuildMirrorExResponse"
+            }
+        },
+        "GetMirrorURL": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetMirrorURL",
+            "input": {
+                "message": "GetMirrorURLIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "strMessage",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetMirrorURL"
+            },
+            "output": {
+                "message": "GetMirrorURLOut",
+                "parameters": [
+                    {
+                        "name": "pstrUrl",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetMirrorURLResponse"
+            }
+        },
+        "BuildForward": {
+            "kind": "static",
+            "soapAction": "nms:delivery#BuildForward",
+            "input": {
+                "message": "BuildForwardIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strCrypted",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildForward"
+            },
+            "output": {
+                "message": "BuildForwardOut",
+                "parameters": [
+                    {
+                        "name": "pstrContent",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "plResponseCode",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "BuildForwardResponse"
+            }
+        },
+        "UpdateBroadLogs": {
+            "kind": "static",
+            "soapAction": "nms:delivery#UpdateBroadLogs",
+            "input": {
+                "message": "UpdateBroadLogsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "domLogs",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bDeliveryMustExist",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateBroadLogs"
+            },
+            "output": {
+                "message": "UpdateBroadLogsOut",
+                "parameters": [],
+                "element": "UpdateBroadLogsResponse"
+            }
+        },
+        "RecomputeStats": {
+            "kind": "static",
+            "soapAction": "nms:delivery#RecomputeStats",
+            "input": {
+                "message": "RecomputeStatsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "btDirtyFlags",
+                        "type": "byte",
+                        "required": true
+                    }
+                ],
+                "element": "RecomputeStats"
+            },
+            "output": {
+                "message": "RecomputeStatsOut",
+                "parameters": [],
+                "element": "RecomputeStatsResponse"
+            }
+        },
+        "ExecCommand": {
+            "kind": "static",
+            "soapAction": "nms:delivery#ExecCommand",
+            "input": {
+                "message": "ExecCommandIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDeliveryId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strCommand",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExecCommand"
+            },
+            "output": {
+                "message": "ExecCommandOut",
+                "parameters": [
+                    {
+                        "name": "pbtNewState",
+                        "type": "byte",
+                        "required": true
+                    }
+                ],
+                "element": "ExecCommandResponse"
+            }
+        },
+        "ValidateWavesDefinition": {
+            "kind": "static",
+            "soapAction": "nms:delivery#ValidateWavesDefinition",
+            "input": {
+                "message": "ValidateWavesDefinitionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemDefinition",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ValidateWavesDefinition"
+            },
+            "output": {
+                "message": "ValidateWavesDefinitionOut",
+                "parameters": [
+                    {
+                        "name": "pelemValidation",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ValidateWavesDefinitionResponse"
+            }
+        },
+        "SubmitMidSourcing": {
+            "kind": "static",
+            "soapAction": "nms:delivery#SubmitMidSourcing",
+            "input": {
+                "message": "SubmitMidSourcingIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domDelivery",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "domRoutingMatch",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strFolderName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitMidSourcing"
+            },
+            "output": {
+                "message": "SubmitMidSourcingOut",
+                "parameters": [
+                    {
+                        "name": "plRemoteId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "plRemoteMatchId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SubmitMidSourcingResponse"
+            }
+        },
+        "FinalizeMidPreparation": {
+            "kind": "static",
+            "soapAction": "nms:delivery#FinalizeMidPreparation",
+            "input": {
+                "message": "FinalizeMidPreparationIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lErrorCode",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "domProperties",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bRetry",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "FinalizeMidPreparation"
+            },
+            "output": {
+                "message": "FinalizeMidPreparationOut",
+                "parameters": [
+                    {
+                        "name": "plFatalError",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrFatalErrorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "FinalizeMidPreparationResponse"
+            }
+        },
+        "PullDeliveryParts": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PullDeliveryParts",
+            "input": {
+                "message": "PullDeliveryPartsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "PullDeliveryParts"
+            },
+            "output": {
+                "message": "PullDeliveryPartsOut",
+                "parameters": [],
+                "element": "PullDeliveryPartsResponse"
+            }
+        },
+        "AppendDeliveryPart": {
+            "kind": "static",
+            "soapAction": "nms:delivery#AppendDeliveryPart",
+            "input": {
+                "message": "AppendDeliveryPartIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domDeliveryPart",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bRetry",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "AppendDeliveryPart"
+            },
+            "output": {
+                "message": "AppendDeliveryPartOut",
+                "parameters": [
+                    {
+                        "name": "plDeliveryPartId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "plFatalError",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrFatalErrorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "AppendDeliveryPartResponse"
+            }
+        },
+        "StoreMirrorPageInfoEx": {
+            "kind": "static",
+            "soapAction": "nms:delivery#StoreMirrorPageInfoEx",
+            "input": {
+                "message": "StoreMirrorPageInfoExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "bNotification",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "lPartsCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lFirstPartId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lNotificationId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "StoreMirrorPageInfoEx"
+            },
+            "output": {
+                "message": "StoreMirrorPageInfoExOut",
+                "parameters": [
+                    {
+                        "name": "plFatalError",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrFatalErrorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "StoreMirrorPageInfoExResponse"
+            }
+        },
+        "StoreMirrorPageInfo": {
+            "kind": "static",
+            "soapAction": "nms:delivery#StoreMirrorPageInfo",
+            "input": {
+                "message": "StoreMirrorPageInfoIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lPartsCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lFirstPartId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lLastPartId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "StoreMirrorPageInfo"
+            },
+            "output": {
+                "message": "StoreMirrorPageInfoOut",
+                "parameters": [
+                    {
+                        "name": "plFatalError",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrFatalErrorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "StoreMirrorPageInfoResponse"
+            }
+        },
+        "UpdateCachedDelivery": {
+            "kind": "static",
+            "soapAction": "nms:delivery#UpdateCachedDelivery",
+            "input": {
+                "message": "UpdateCachedDeliveryIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateCachedDelivery"
+            },
+            "output": {
+                "message": "UpdateCachedDeliveryOut",
+                "parameters": [],
+                "element": "UpdateCachedDeliveryResponse"
+            }
+        },
+        "InvalidateDeliveryCache": {
+            "kind": "static",
+            "soapAction": "nms:delivery#InvalidateDeliveryCache",
+            "input": {
+                "message": "InvalidateDeliveryCacheIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "InvalidateDeliveryCache"
+            },
+            "output": {
+                "message": "InvalidateDeliveryCacheOut",
+                "parameters": [],
+                "element": "InvalidateDeliveryCacheResponse"
+            }
+        },
+        "GetMidBroadLogs": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetMidBroadLogs",
+            "input": {
+                "message": "GetMidBroadLogsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tmStartDate",
+                        "type": "dateTime",
+                        "required": true
+                    },
+                    {
+                        "name": "lLogCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "tmEmitterDate",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidBroadLogs"
+            },
+            "output": {
+                "message": "GetMidBroadLogsOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "ptmNextDate",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidBroadLogsResponse"
+            }
+        },
+        "GetMidDeliveries": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetMidDeliveries",
+            "input": {
+                "message": "GetMidDeliveriesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tmStartDate",
+                        "type": "dateTime",
+                        "required": true
+                    },
+                    {
+                        "name": "lMaxCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "tmEmitterDate",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidDeliveries"
+            },
+            "output": {
+                "message": "GetMidDeliveriesOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "ptmNextDate",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidDeliveriesResponse"
+            }
+        },
+        "GetMidDeliveryStats": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetMidDeliveryStats",
+            "input": {
+                "message": "GetMidDeliveryStatsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tmStartDate",
+                        "type": "dateTime",
+                        "required": true
+                    },
+                    {
+                        "name": "lMaxDlvStatCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "tmEmitterDate",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidDeliveryStats"
+            },
+            "output": {
+                "message": "GetMidDeliveryStatsOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "ptmNextDate",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidDeliveryStatsResponse"
+            }
+        },
+        "CleanupDeliveries": {
+            "kind": "static",
+            "soapAction": "nms:delivery#CleanupDeliveries",
+            "input": {
+                "message": "CleanupDeliveriesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDeliveryId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CleanupDeliveries"
+            },
+            "output": {
+                "message": "CleanupDeliveriesOut",
+                "parameters": [],
+                "element": "CleanupDeliveriesResponse"
+            }
+        },
+        "DispatchImages": {
+            "kind": "static",
+            "soapAction": "nms:delivery#DispatchImages",
+            "input": {
+                "message": "DispatchImagesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strImages",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lProviderId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "strProviderName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DispatchImages"
+            },
+            "output": {
+                "message": "DispatchImagesOut",
+                "parameters": [],
+                "element": "DispatchImagesResponse"
+            }
+        },
+        "ImagePublishing": {
+            "kind": "static",
+            "soapAction": "nms:delivery#ImagePublishing",
+            "input": {
+                "message": "ImagePublishingIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strImageList",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ImagePublishing"
+            },
+            "output": {
+                "message": "ImagePublishingOut",
+                "parameters": [],
+                "element": "ImagePublishingResponse"
+            }
+        },
+        "PrepareMultipartRelated": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PrepareMultipartRelated",
+            "input": {
+                "message": "PrepareMultipartRelatedIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemImageList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bEmbedImages",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "PrepareMultipartRelated"
+            },
+            "output": {
+                "message": "PrepareMultipartRelatedOut",
+                "parameters": [],
+                "element": "PrepareMultipartRelatedResponse"
+            }
+        },
+        "PreviewExtraction": {
+            "kind": "static",
+            "soapAction": "nms:delivery#PreviewExtraction",
+            "input": {
+                "message": "PreviewExtractionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "fileName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "nbLines",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "PreviewExtraction"
+            },
+            "output": {
+                "message": "PreviewExtractionOut",
+                "parameters": [
+                    {
+                        "name": "result",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "PreviewExtractionResponse"
+            }
+        },
+        "DeployTriggerMessages": {
+            "kind": "static",
+            "soapAction": "nms:delivery#DeployTriggerMessages",
+            "input": {
+                "message": "DeployTriggerMessagesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemDeliveries",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bLocalPublish",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "DeployTriggerMessages"
+            },
+            "output": {
+                "message": "DeployTriggerMessagesOut",
+                "parameters": [],
+                "element": "DeployTriggerMessagesResponse"
+            }
+        },
+        "DeployTriggerMessageSingle": {
+            "kind": "static",
+            "soapAction": "nms:delivery#DeployTriggerMessageSingle",
+            "input": {
+                "message": "DeployTriggerMessageSingleIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "deliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "localPublish",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "DeployTriggerMessageSingle"
+            },
+            "output": {
+                "message": "DeployTriggerMessageSingleOut",
+                "parameters": [
+                    {
+                        "name": "isSuccess",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "DeployTriggerMessageSingleResponse"
+            }
+        },
+        "RecallTriggerMessages": {
+            "kind": "static",
+            "soapAction": "nms:delivery#RecallTriggerMessages",
+            "input": {
+                "message": "RecallTriggerMessagesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "deliveryId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "localPublish",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "RecallTriggerMessages"
+            },
+            "output": {
+                "message": "RecallTriggerMessagesOut",
+                "parameters": [
+                    {
+                        "name": "isSuccess",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "RecallTriggerMessagesResponse"
+            }
+        },
+        "InstallTransactionalMessage": {
+            "kind": "static",
+            "soapAction": "nms:delivery#InstallTransactionalMessage",
+            "input": {
+                "message": "InstallTransactionalMessageIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "InstallTransactionalMessage"
+            },
+            "output": {
+                "message": "InstallTransactionalMessageOut",
+                "parameters": [],
+                "element": "InstallTransactionalMessageResponse"
+            }
+        },
+        "UninstallTransactionalMessage": {
+            "kind": "static",
+            "soapAction": "nms:delivery#UninstallTransactionalMessage",
+            "input": {
+                "message": "UninstallTransactionalMessageIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "internalName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "UninstallTransactionalMessage"
+            },
+            "output": {
+                "message": "UninstallTransactionalMessageOut",
+                "parameters": [],
+                "element": "UninstallTransactionalMessageResponse"
+            }
+        },
+        "GetMidXtkKey": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetMidXtkKey",
+            "input": {
+                "message": "GetMidXtkKeyIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidXtkKey"
+            },
+            "output": {
+                "message": "GetMidXtkKeyOut",
+                "parameters": [
+                    {
+                        "name": "pstrKey",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetMidXtkKeyResponse"
+            }
+        },
+        "BuildTargetDataSchema": {
+            "kind": "static",
+            "soapAction": "nms:delivery#BuildTargetDataSchema",
+            "input": {
+                "message": "BuildTargetDataSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDeliveryId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BuildTargetDataSchema"
+            },
+            "output": {
+                "message": "BuildTargetDataSchemaOut",
+                "parameters": [
+                    {
+                        "name": "pelemSchema",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildTargetDataSchemaResponse"
+            }
+        },
+        "GetSeedList": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetSeedList",
+            "input": {
+                "message": "GetSeedListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "did",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "cuid",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "deviceList",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetSeedList"
+            },
+            "output": {
+                "message": "GetSeedListOut",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetSeedListResponse"
+            }
+        },
+        "GetDeviceList": {
+            "kind": "static",
+            "soapAction": "nms:delivery#GetDeviceList",
+            "input": {
+                "message": "GetDeviceListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "cuid",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetDeviceList"
+            },
+            "output": {
+                "message": "GetDeviceListOut",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDeviceListResponse"
+            }
+        },
+        "IsFfda": {
+            "kind": "static",
+            "soapAction": "nms:delivery#IsFfda",
+            "input": {
+                "message": "IsFfdaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lDeliveryId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "IsFfda"
+            },
+            "output": {
+                "message": "IsFfdaOut",
+                "parameters": [
+                    {
+                        "name": "pbIsFfda",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "IsFfdaResponse"
+            }
+        },
+        "CheckSMSConnector": {
+            "kind": "static",
+            "soapAction": "nms:delivery#CheckSMSConnector",
+            "input": {
+                "message": "CheckSMSConnectorIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bIsFfda",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "CheckSMSConnector"
+            },
+            "output": {
+                "message": "CheckSMSConnectorOut",
+                "parameters": [
+                    {
+                        "name": "pbIsValid",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "CheckSMSConnectorResponse"
+            }
+        },
+        "Cancel": {
+            "kind": "static",
+            "soapAction": "nms:delivery#Cancel",
+            "input": {
+                "message": "CancelIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "deliveryId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Cancel"
+            },
+            "output": {
+                "message": "CancelOut",
+                "parameters": [],
+                "element": "CancelResponse"
+            }
+        }
+    }
+}

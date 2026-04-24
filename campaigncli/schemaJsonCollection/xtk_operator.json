@@ -1,0 +1,68 @@
+{
+    "schema": "xtk:operator",
+    "targetNamespace": "urn:xtk:operator",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:operator",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "CheckRights": {
+            "kind": "static",
+            "soapAction": "xtk:operator#CheckRights",
+            "input": {
+                "message": "CheckRightsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strGroupList",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CheckRights"
+            },
+            "output": {
+                "message": "CheckRightsOut",
+                "parameters": [],
+                "element": "CheckRightsResponse"
+            }
+        },
+        "ResetPassword": {
+            "kind": "static",
+            "soapAction": "xtk:operator#ResetPassword",
+            "input": {
+                "message": "ResetPasswordIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strLogin",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strNewPassword",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ResetPassword"
+            },
+            "output": {
+                "message": "ResetPasswordOut",
+                "parameters": [],
+                "element": "ResetPasswordResponse"
+            }
+        }
+    }
+}

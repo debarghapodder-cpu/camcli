@@ -1,0 +1,133 @@
+{
+    "schema": "nms:recipient",
+    "targetNamespace": "urn:nms:recipient",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:recipient",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "RegisterGroup": {
+            "kind": "static",
+            "soapAction": "nms:recipient#RegisterGroup",
+            "input": {
+                "message": "RegisterGroupIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemGroupList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "elemRecipientList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bRegister",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "RegisterGroup"
+            },
+            "output": {
+                "message": "RegisterGroupOut",
+                "parameters": [],
+                "element": "RegisterGroupResponse"
+            }
+        },
+        "RegisterGroup2": {
+            "kind": "static",
+            "soapAction": "nms:recipient#RegisterGroup2",
+            "input": {
+                "message": "RegisterGroup2In",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemGroupList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "elemRecipientList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "elemClearGroup",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "RegisterGroup2"
+            },
+            "output": {
+                "message": "RegisterGroup2Out",
+                "parameters": [],
+                "element": "RegisterGroup2Response"
+            }
+        },
+        "ClearFolder": {
+            "kind": "static",
+            "soapAction": "nms:recipient#ClearFolder",
+            "input": {
+                "message": "ClearFolderIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemFolderId",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ClearFolder"
+            },
+            "output": {
+                "message": "ClearFolderOut",
+                "parameters": [],
+                "element": "ClearFolderResponse"
+            }
+        },
+        "ClearGroup": {
+            "kind": "static",
+            "soapAction": "nms:recipient#ClearGroup",
+            "input": {
+                "message": "ClearGroupIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemGroupId",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ClearGroup"
+            },
+            "output": {
+                "message": "ClearGroupOut",
+                "parameters": [],
+                "element": "ClearGroupResponse"
+            }
+        }
+    }
+}

@@ -1,0 +1,1026 @@
+{
+    "schema": "xtk:builder",
+    "targetNamespace": "urn:xtk:builder",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:builder",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "GetDbParams": {
+            "kind": "static",
+            "soapAction": "xtk:builder#GetDbParams",
+            "input": {
+                "message": "GetDbParamsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetDbParams"
+            },
+            "output": {
+                "message": "GetDbParamsOut",
+                "parameters": [
+                    {
+                        "name": "pelemDbcnx",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pelemDbParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDbParamsResponse"
+            }
+        },
+        "GetDbCnxSettings": {
+            "kind": "static",
+            "soapAction": "xtk:builder#GetDbCnxSettings",
+            "input": {
+                "message": "GetDbCnxSettingsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetDbCnxSettings"
+            },
+            "output": {
+                "message": "GetDbCnxSettingsOut",
+                "parameters": [
+                    {
+                        "name": "pelemDbcnx",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDbCnxSettingsResponse"
+            }
+        },
+        "GenCreateDbDDL": {
+            "kind": "static",
+            "soapAction": "xtk:builder#GenCreateDbDDL",
+            "input": {
+                "message": "GenCreateDbDDLIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenCreateDbDDL"
+            },
+            "output": {
+                "message": "GenCreateDbDDLOut",
+                "parameters": [
+                    {
+                        "name": "pstrSqlDDL",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenCreateDbDDLResponse"
+            }
+        },
+        "CreateDb": {
+            "kind": "static",
+            "soapAction": "xtk:builder#CreateDb",
+            "input": {
+                "message": "CreateDbIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CreateDb"
+            },
+            "output": {
+                "message": "CreateDbOut",
+                "parameters": [],
+                "element": "CreateDbResponse"
+            }
+        },
+        "UpdateDb": {
+            "kind": "static",
+            "soapAction": "xtk:builder#UpdateDb",
+            "input": {
+                "message": "UpdateDbIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateDb"
+            },
+            "output": {
+                "message": "UpdateDbOut",
+                "parameters": [],
+                "element": "UpdateDbResponse"
+            }
+        },
+        "InstallVendorPackages": {
+            "kind": "static",
+            "soapAction": "xtk:builder#InstallVendorPackages",
+            "input": {
+                "message": "InstallVendorPackagesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "InstallVendorPackages"
+            },
+            "output": {
+                "message": "InstallVendorPackagesOut",
+                "parameters": [],
+                "element": "InstallVendorPackagesResponse"
+            }
+        },
+        "InstallPackageImpl": {
+            "kind": "static",
+            "soapAction": "xtk:builder#InstallPackageImpl",
+            "input": {
+                "message": "InstallPackageImplIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bForce",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "InstallPackageImpl"
+            },
+            "output": {
+                "message": "InstallPackageImplOut",
+                "parameters": [],
+                "element": "InstallPackageImplResponse"
+            }
+        },
+        "InstallPackage": {
+            "kind": "static",
+            "soapAction": "xtk:builder#InstallPackage",
+            "input": {
+                "message": "InstallPackageIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "InstallPackage"
+            },
+            "output": {
+                "message": "InstallPackageOut",
+                "parameters": [],
+                "element": "InstallPackageResponse"
+            }
+        },
+        "ResolvePackageReferences": {
+            "kind": "static",
+            "soapAction": "xtk:builder#ResolvePackageReferences",
+            "input": {
+                "message": "ResolvePackageReferencesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ResolvePackageReferences"
+            },
+            "output": {
+                "message": "ResolvePackageReferencesOut",
+                "parameters": [
+                    {
+                        "name": "pelemPatchedPackage",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "plWarningNb",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "ResolvePackageReferencesResponse"
+            }
+        },
+        "BuildSchema": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildSchema",
+            "input": {
+                "message": "BuildSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemSource",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildSchema"
+            },
+            "output": {
+                "message": "BuildSchemaOut",
+                "parameters": [],
+                "element": "BuildSchemaResponse"
+            }
+        },
+        "BuildSchemaFromId": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildSchemaFromId",
+            "input": {
+                "message": "BuildSchemaFromIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchemaId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BuildSchemaFromId"
+            },
+            "output": {
+                "message": "BuildSchemaFromIdOut",
+                "parameters": [],
+                "element": "BuildSchemaFromIdResponse"
+            }
+        },
+        "BuildOutputSchema": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildOutputSchema",
+            "input": {
+                "message": "BuildOutputSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemSource",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bSaveEntity",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "BuildOutputSchema"
+            },
+            "output": {
+                "message": "BuildOutputSchemaOut",
+                "parameters": [
+                    {
+                        "name": "pdomSchema",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildOutputSchemaResponse"
+            }
+        },
+        "BuildStagingSchema": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildStagingSchema",
+            "input": {
+                "message": "BuildStagingSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchemaId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bInstallAsPackage",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "BuildStagingSchema"
+            },
+            "output": {
+                "message": "BuildStagingSchemaOut",
+                "parameters": [],
+                "element": "BuildStagingSchemaResponse"
+            }
+        },
+        "BuildSqlSchemaDiff": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildSqlSchemaDiff",
+            "input": {
+                "message": "BuildSqlSchemaDiffIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemSqlDiffParam",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "elemPackage",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildSqlSchemaDiff"
+            },
+            "output": {
+                "message": "BuildSqlSchemaDiffOut",
+                "parameters": [
+                    {
+                        "name": "pdomSqlSchemaDiff",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildSqlSchemaDiffResponse"
+            }
+        },
+        "BuildUpdateSchemaDiff": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildUpdateSchemaDiff",
+            "input": {
+                "message": "BuildUpdateSchemaDiffIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bUseNamingConventions",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "BuildUpdateSchemaDiff"
+            },
+            "output": {
+                "message": "BuildUpdateSchemaDiffOut",
+                "parameters": [
+                    {
+                        "name": "pdomSqlSchemaDiff",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildUpdateSchemaDiffResponse"
+            }
+        },
+        "BuildUpdateOneSchemaDiff": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildUpdateOneSchemaDiff",
+            "input": {
+                "message": "BuildUpdateOneSchemaDiffIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchemaId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bUseNamingConventions",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "BuildUpdateOneSchemaDiff"
+            },
+            "output": {
+                "message": "BuildUpdateOneSchemaDiffOut",
+                "parameters": [
+                    {
+                        "name": "pdomSqlSchemaDiff",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildUpdateOneSchemaDiffResponse"
+            }
+        },
+        "GenerateNavTree": {
+            "kind": "static",
+            "soapAction": "xtk:builder#GenerateNavTree",
+            "input": {
+                "message": "GenerateNavTreeIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateNavTree"
+            },
+            "output": {
+                "message": "GenerateNavTreeOut",
+                "parameters": [],
+                "element": "GenerateNavTreeResponse"
+            }
+        },
+        "BuildOutputNavTree": {
+            "kind": "static",
+            "soapAction": "xtk:builder#BuildOutputNavTree",
+            "input": {
+                "message": "BuildOutputNavTreeIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemNavtreeSource",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bSave",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "BuildOutputNavTree"
+            },
+            "output": {
+                "message": "BuildOutputNavTreeOut",
+                "parameters": [
+                    {
+                        "name": "pdomNavtree",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildOutputNavTreeResponse"
+            }
+        },
+        "GetDefaultNamespace": {
+            "kind": "static",
+            "soapAction": "xtk:builder#GetDefaultNamespace",
+            "input": {
+                "message": "GetDefaultNamespaceIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetDefaultNamespace"
+            },
+            "output": {
+                "message": "GetDefaultNamespaceOut",
+                "parameters": [
+                    {
+                        "name": "pstrNamspace",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetDefaultNamespaceResponse"
+            }
+        },
+        "RemoveSchemaLinkRef": {
+            "kind": "static",
+            "soapAction": "xtk:builder#RemoveSchemaLinkRef",
+            "input": {
+                "message": "RemoveSchemaLinkRefIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExtendedSchema",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "RemoveSchemaLinkRef"
+            },
+            "output": {
+                "message": "RemoveSchemaLinkRefOut",
+                "parameters": [],
+                "element": "RemoveSchemaLinkRefResponse"
+            }
+        },
+        "GenerateSchema": {
+            "kind": "static",
+            "soapAction": "xtk:builder#GenerateSchema",
+            "input": {
+                "message": "GenerateSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "elemSource",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateSchema"
+            },
+            "output": {
+                "message": "GenerateSchemaOut",
+                "parameters": [
+                    {
+                        "name": "pdomSchema",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateSchemaResponse"
+            }
+        },
+        "UpdateSchemaFromDatabase": {
+            "kind": "static",
+            "soapAction": "xtk:builder#UpdateSchemaFromDatabase",
+            "input": {
+                "message": "UpdateSchemaFromDatabaseIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateSchemaFromDatabase"
+            },
+            "output": {
+                "message": "UpdateSchemaFromDatabaseOut",
+                "parameters": [],
+                "element": "UpdateSchemaFromDatabaseResponse"
+            }
+        },
+        "UpdateTempSchemasFromDatabase": {
+            "kind": "static",
+            "soapAction": "xtk:builder#UpdateTempSchemasFromDatabase",
+            "input": {
+                "message": "UpdateTempSchemasFromDatabaseIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemSchema",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateTempSchemasFromDatabase"
+            },
+            "output": {
+                "message": "UpdateTempSchemasFromDatabaseOut",
+                "parameters": [
+                    {
+                        "name": "pelemResult",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrWarning",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateTempSchemasFromDatabaseResponse"
+            }
+        },
+        "ExecSql": {
+            "kind": "static",
+            "soapAction": "xtk:builder#ExecSql",
+            "input": {
+                "message": "ExecSqlIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDataSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSql",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExecSql"
+            },
+            "output": {
+                "message": "ExecSqlOut",
+                "parameters": [],
+                "element": "ExecSqlResponse"
+            }
+        },
+        "ExecSqlScript": {
+            "kind": "static",
+            "soapAction": "xtk:builder#ExecSqlScript",
+            "input": {
+                "message": "ExecSqlScriptIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDataSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSql",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExecSqlScript"
+            },
+            "output": {
+                "message": "ExecSqlScriptOut",
+                "parameters": [],
+                "element": "ExecSqlScriptResponse"
+            }
+        },
+        "CheckTableExists": {
+            "kind": "static",
+            "soapAction": "xtk:builder#CheckTableExists",
+            "input": {
+                "message": "CheckTableExistsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDataSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTableName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CheckTableExists"
+            },
+            "output": {
+                "message": "CheckTableExistsOut",
+                "parameters": [
+                    {
+                        "name": "pbExists",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "CheckTableExistsResponse"
+            }
+        },
+        "EvaluateJavaScript": {
+            "kind": "static",
+            "soapAction": "xtk:builder#EvaluateJavaScript",
+            "input": {
+                "message": "EvaluateJavaScriptIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strScript",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pdomContext",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "EvaluateJavaScript"
+            },
+            "output": {
+                "message": "EvaluateJavaScriptOut",
+                "parameters": [
+                    {
+                        "name": "pdomContext",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "EvaluateJavaScriptResponse"
+            }
+        },
+        "EvaluateJavaScriptTemplate": {
+            "kind": "static",
+            "soapAction": "xtk:builder#EvaluateJavaScriptTemplate",
+            "input": {
+                "message": "EvaluateJavaScriptTemplateIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTemplate",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pdomContext",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "EvaluateJavaScriptTemplate"
+            },
+            "output": {
+                "message": "EvaluateJavaScriptTemplateOut",
+                "parameters": [
+                    {
+                        "name": "pdomContext",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EvaluateJavaScriptTemplateResponse"
+            }
+        },
+        "GenCreateOrUpdateSchemaSequenceDDL": {
+            "kind": "static",
+            "soapAction": "xtk:builder#GenCreateOrUpdateSchemaSequenceDDL",
+            "input": {
+                "message": "GenCreateOrUpdateSchemaSequenceDDLIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchemaId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strNewSequence",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strOldSequence",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenCreateOrUpdateSchemaSequenceDDL"
+            },
+            "output": {
+                "message": "GenCreateOrUpdateSchemaSequenceDDLOut",
+                "parameters": [
+                    {
+                        "name": "pstrSqlDDL",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenCreateOrUpdateSchemaSequenceDDLResponse"
+            }
+        },
+        "CreateXxlSchemas": {
+            "kind": "static",
+            "soapAction": "xtk:builder#CreateXxlSchemas",
+            "input": {
+                "message": "CreateXxlSchemasIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParams",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CreateXxlSchemas"
+            },
+            "output": {
+                "message": "CreateXxlSchemasOut",
+                "parameters": [
+                    {
+                        "name": "pdomCollection",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CreateXxlSchemasResponse"
+            }
+        },
+        "CopyXxlData": {
+            "kind": "static",
+            "soapAction": "xtk:builder#CopyXxlData",
+            "input": {
+                "message": "CopyXxlDataIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParams",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CopyXxlData"
+            },
+            "output": {
+                "message": "CopyXxlDataOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CopyXxlDataResponse"
+            }
+        },
+        "UpdateXxlDeliveryMappings": {
+            "kind": "static",
+            "soapAction": "xtk:builder#UpdateXxlDeliveryMappings",
+            "input": {
+                "message": "UpdateXxlDeliveryMappingsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateXxlDeliveryMappings"
+            },
+            "output": {
+                "message": "UpdateXxlDeliveryMappingsOut",
+                "parameters": [],
+                "element": "UpdateXxlDeliveryMappingsResponse"
+            }
+        },
+        "RebuildAllSchemas": {
+            "kind": "static",
+            "soapAction": "xtk:builder#RebuildAllSchemas",
+            "input": {
+                "message": "RebuildAllSchemasIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "RebuildAllSchemas"
+            },
+            "output": {
+                "message": "RebuildAllSchemasOut",
+                "parameters": [],
+                "element": "RebuildAllSchemasResponse"
+            }
+        }
+    }
+}

@@ -1,0 +1,1402 @@
+{
+    "schema": "xtk:session",
+    "targetNamespace": "urn:xtk:session",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:session",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "NewInstance": {
+            "kind": "static",
+            "soapAction": "xtk:persist#NewInstance",
+            "input": {
+                "message": "NewInstanceIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "NewInstance"
+            },
+            "output": {
+                "message": "NewInstanceOut",
+                "parameters": [],
+                "element": "NewInstanceResponse"
+            }
+        },
+        "Duplicate": {
+            "kind": "static",
+            "soapAction": "xtk:persist#Duplicate",
+            "input": {
+                "message": "DuplicateIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pkPk",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Duplicate"
+            },
+            "output": {
+                "message": "DuplicateOut",
+                "parameters": [],
+                "element": "DuplicateResponse"
+            }
+        },
+        "DuplicateWithMappingId": {
+            "kind": "static",
+            "soapAction": "xtk:persist#DuplicateWithMappingId",
+            "input": {
+                "message": "DuplicateWithMappingIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pkPk",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DuplicateWithMappingId"
+            },
+            "output": {
+                "message": "DuplicateWithMappingIdOut",
+                "parameters": [],
+                "element": "DuplicateWithMappingIdResponse"
+            }
+        },
+        "DuplicateTo": {
+            "kind": "static",
+            "soapAction": "xtk:persist#DuplicateTo",
+            "input": {
+                "message": "DuplicateToIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pkPk",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkFolder",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DuplicateTo"
+            },
+            "output": {
+                "message": "DuplicateToOut",
+                "parameters": [],
+                "element": "DuplicateToResponse"
+            }
+        },
+        "ApplyDuplicateRules": {
+            "kind": "static",
+            "soapAction": "xtk:persist#ApplyDuplicateRules",
+            "input": {
+                "message": "ApplyDuplicateRulesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ApplyDuplicateRules"
+            },
+            "output": {
+                "message": "ApplyDuplicateRulesOut",
+                "parameters": [],
+                "element": "ApplyDuplicateRulesResponse"
+            }
+        },
+        "SetDefaults": {
+            "kind": "static",
+            "soapAction": "xtk:persist#SetDefaults",
+            "input": {
+                "message": "SetDefaultsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SetDefaults"
+            },
+            "output": {
+                "message": "SetDefaultsOut",
+                "parameters": [],
+                "element": "SetDefaultsResponse"
+            }
+        },
+        "SetDefaultValues": {
+            "kind": "static",
+            "soapAction": "xtk:persist#SetDefaultValues",
+            "input": {
+                "message": "SetDefaultValuesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strXpath",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SetDefaultValues"
+            },
+            "output": {
+                "message": "SetDefaultValuesOut",
+                "parameters": [],
+                "element": "SetDefaultValuesResponse"
+            }
+        },
+        "Load": {
+            "kind": "static",
+            "soapAction": "xtk:persist#Load",
+            "input": {
+                "message": "LoadIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pkPk",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Load"
+            },
+            "output": {
+                "message": "LoadOut",
+                "parameters": [],
+                "element": "LoadResponse"
+            }
+        },
+        "LoadIfExists": {
+            "kind": "static",
+            "soapAction": "xtk:persist#LoadIfExists",
+            "input": {
+                "message": "LoadIfExistsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pkPk",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "LoadIfExists"
+            },
+            "output": {
+                "message": "LoadIfExistsOut",
+                "parameters": [],
+                "element": "LoadIfExistsResponse"
+            }
+        },
+        "LoadAsText": {
+            "kind": "static",
+            "soapAction": "xtk:persist#LoadAsText",
+            "input": {
+                "message": "LoadAsTextIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkPk",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "LoadAsText"
+            },
+            "output": {
+                "message": "LoadAsTextOut",
+                "parameters": [
+                    {
+                        "name": "pstrContent",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "LoadAsTextResponse"
+            }
+        },
+        "Remove": {
+            "kind": "static",
+            "soapAction": "xtk:persist#Remove",
+            "input": {
+                "message": "RemoveIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Remove"
+            },
+            "output": {
+                "message": "RemoveOut",
+                "parameters": [],
+                "element": "RemoveResponse"
+            }
+        },
+        "GetPkList": {
+            "kind": "static",
+            "soapAction": "xtk:persist#GetPkList",
+            "input": {
+                "message": "GetPkListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetPkList"
+            },
+            "output": {
+                "message": "GetPkListOut",
+                "parameters": [
+                    {
+                        "name": "ppklPkList",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetPkListResponse"
+            }
+        },
+        "Write": {
+            "kind": "static",
+            "soapAction": "xtk:persist#Write",
+            "input": {
+                "message": "WriteIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Write"
+            },
+            "output": {
+                "message": "WriteOut",
+                "parameters": [],
+                "element": "WriteResponse"
+            }
+        },
+        "Ingest": {
+            "kind": "static",
+            "soapAction": "xtk:persist#Ingest",
+            "input": {
+                "message": "IngestIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Ingest"
+            },
+            "output": {
+                "message": "IngestOut",
+                "parameters": [
+                    {
+                        "name": "pstrSUuids",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "IngestResponse"
+            }
+        },
+        "IngestExt": {
+            "kind": "static",
+            "soapAction": "xtk:persist#IngestExt",
+            "input": {
+                "message": "IngestExtIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "IngestExt"
+            },
+            "output": {
+                "message": "IngestExtOut",
+                "parameters": [],
+                "element": "IngestExtResponse"
+            }
+        },
+        "WriteCollection": {
+            "kind": "static",
+            "soapAction": "xtk:persist#WriteCollection",
+            "input": {
+                "message": "WriteCollectionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "WriteCollection"
+            },
+            "output": {
+                "message": "WriteCollectionOut",
+                "parameters": [],
+                "element": "WriteCollectionResponse"
+            }
+        },
+        "DeleteCollection": {
+            "kind": "static",
+            "soapAction": "xtk:persist#DeleteCollection",
+            "input": {
+                "message": "DeleteCollectionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bIgnoreDeleteStatus",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "DeleteCollection"
+            },
+            "output": {
+                "message": "DeleteCollectionOut",
+                "parameters": [],
+                "element": "DeleteCollectionResponse"
+            }
+        },
+        "ImportCollection": {
+            "kind": "static",
+            "soapAction": "xtk:persist#ImportCollection",
+            "input": {
+                "message": "ImportCollectionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ImportCollection"
+            },
+            "output": {
+                "message": "ImportCollectionOut",
+                "parameters": [],
+                "element": "ImportCollectionResponse"
+            }
+        },
+        "GetImages": {
+            "kind": "static",
+            "soapAction": "xtk:persist#GetImages",
+            "input": {
+                "message": "GetImagesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPkList",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetImages"
+            },
+            "output": {
+                "message": "GetImagesOut",
+                "parameters": [
+                    {
+                        "name": "pdomDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetImagesResponse"
+            }
+        },
+        "GetEntityIfMoreRecent": {
+            "kind": "static",
+            "soapAction": "xtk:persist#GetEntityIfMoreRecent",
+            "input": {
+                "message": "GetEntityIfMoreRecentIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPk",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strMd5",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bMustExist",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "GetEntityIfMoreRecent"
+            },
+            "output": {
+                "message": "GetEntityIfMoreRecentOut",
+                "parameters": [
+                    {
+                        "name": "pdomDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetEntityIfMoreRecentResponse"
+            }
+        },
+        "GetDirtyCacheEntities": {
+            "kind": "static",
+            "soapAction": "xtk:persist#GetDirtyCacheEntities",
+            "input": {
+                "message": "GetDirtyCacheEntitiesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domCacheEntities",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDirtyCacheEntities"
+            },
+            "output": {
+                "message": "GetDirtyCacheEntitiesOut",
+                "parameters": [
+                    {
+                        "name": "pdomDirtyEntities",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDirtyCacheEntitiesResponse"
+            }
+        },
+        "InvalidateSchemaInCache": {
+            "kind": "static",
+            "soapAction": "xtk:persist#InvalidateSchemaInCache",
+            "input": {
+                "message": "InvalidateSchemaInCacheIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchemaId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "InvalidateSchemaInCache"
+            },
+            "output": {
+                "message": "InvalidateSchemaInCacheOut",
+                "parameters": [],
+                "element": "InvalidateSchemaInCacheResponse"
+            }
+        },
+        "GetActiveApplicationMenus": {
+            "kind": "static",
+            "soapAction": "xtk:persist#GetActiveApplicationMenus",
+            "input": {
+                "message": "GetActiveApplicationMenusIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetActiveApplicationMenus"
+            },
+            "output": {
+                "message": "GetActiveApplicationMenusOut",
+                "parameters": [
+                    {
+                        "name": "pdomDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetActiveApplicationMenusResponse"
+            }
+        },
+        "GetDefaultEntity": {
+            "kind": "static",
+            "soapAction": "xtk:persist#GetDefaultEntity",
+            "input": {
+                "message": "GetDefaultEntityIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetDefaultEntity"
+            },
+            "output": {
+                "message": "GetDefaultEntityOut",
+                "parameters": [
+                    {
+                        "name": "pdomDoc",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDefaultEntityResponse"
+            }
+        },
+        "Logon": {
+            "kind": "static",
+            "soapAction": "xtk:session#Logon",
+            "input": {
+                "message": "LogonIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strLogin",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPassword",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Logon"
+            },
+            "output": {
+                "message": "LogonOut",
+                "parameters": [
+                    {
+                        "name": "pstrSessionToken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pSessionInfo",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrSecurityToken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "LogonResponse"
+            }
+        },
+        "BearerTokenLogon": {
+            "kind": "static",
+            "soapAction": "xtk:session#BearerTokenLogon",
+            "input": {
+                "message": "BearerTokenLogonIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strBearerToken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BearerTokenLogon"
+            },
+            "output": {
+                "message": "BearerTokenLogonOut",
+                "parameters": [
+                    {
+                        "name": "pstrSessionToken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pSessionInfo",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrSecurityToken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BearerTokenLogonResponse"
+            }
+        },
+        "GetUserInfo": {
+            "kind": "static",
+            "soapAction": "xtk:session#GetUserInfo",
+            "input": {
+                "message": "GetUserInfoIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetUserInfo"
+            },
+            "output": {
+                "message": "GetUserInfoOut",
+                "parameters": [
+                    {
+                        "name": "pUserInfo",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetUserInfoResponse"
+            }
+        },
+        "Logoff": {
+            "kind": "static",
+            "soapAction": "xtk:session#Logoff",
+            "input": {
+                "message": "LogoffIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Logoff"
+            },
+            "output": {
+                "message": "LogoffOut",
+                "parameters": [],
+                "element": "LogoffResponse"
+            }
+        },
+        "KillSession": {
+            "kind": "static",
+            "soapAction": "xtk:session#KillSession",
+            "input": {
+                "message": "KillSessionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "KillSession"
+            },
+            "output": {
+                "message": "KillSessionOut",
+                "parameters": [],
+                "element": "KillSessionResponse"
+            }
+        },
+        "ClearUserContextCache": {
+            "kind": "static",
+            "soapAction": "xtk:session#ClearUserContextCache",
+            "input": {
+                "message": "ClearUserContextCacheIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ClearUserContextCache"
+            },
+            "output": {
+                "message": "ClearUserContextCacheOut",
+                "parameters": [],
+                "element": "ClearUserContextCacheResponse"
+            }
+        },
+        "TestCnx": {
+            "kind": "static",
+            "soapAction": "xtk:session#TestCnx",
+            "input": {
+                "message": "TestCnxIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TestCnx"
+            },
+            "output": {
+                "message": "TestCnxOut",
+                "parameters": [],
+                "element": "TestCnxResponse"
+            }
+        },
+        "ChangePassword": {
+            "kind": "static",
+            "soapAction": "xtk:session#ChangePassword",
+            "input": {
+                "message": "ChangePasswordIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strOldPassword",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strNewPassword",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ChangePassword"
+            },
+            "output": {
+                "message": "ChangePasswordOut",
+                "parameters": [],
+                "element": "ChangePasswordResponse"
+            }
+        },
+        "GetServerTime": {
+            "kind": "static",
+            "soapAction": "xtk:session#GetServerTime",
+            "input": {
+                "message": "GetServerTimeIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetServerTime"
+            },
+            "output": {
+                "message": "GetServerTimeOut",
+                "parameters": [
+                    {
+                        "name": "ptmServerTime",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetServerTimeResponse"
+            }
+        },
+        "ServerShutdown": {
+            "kind": "static",
+            "soapAction": "xtk:session#ServerShutdown",
+            "input": {
+                "message": "ServerShutdownIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ServerShutdown"
+            },
+            "output": {
+                "message": "ServerShutdownOut",
+                "parameters": [],
+                "element": "ServerShutdownResponse"
+            }
+        },
+        "GetOption": {
+            "kind": "static",
+            "soapAction": "xtk:session#GetOption",
+            "input": {
+                "message": "GetOptionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetOption"
+            },
+            "output": {
+                "message": "GetOptionOut",
+                "parameters": [
+                    {
+                        "name": "pstrValue",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pbtType",
+                        "type": "byte",
+                        "required": true
+                    }
+                ],
+                "element": "GetOptionResponse"
+            }
+        },
+        "GetNewIds": {
+            "kind": "static",
+            "soapAction": "xtk:session#GetNewIds",
+            "input": {
+                "message": "GetNewIdsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lCount",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "GetNewIds"
+            },
+            "output": {
+                "message": "GetNewIdsOut",
+                "parameters": [
+                    {
+                        "name": "pstrIdList",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetNewIdsResponse"
+            }
+        },
+        "GetNewIdsEx": {
+            "kind": "static",
+            "soapAction": "xtk:session#GetNewIdsEx",
+            "input": {
+                "message": "GetNewIdsExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "strSequence",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetNewIdsEx"
+            },
+            "output": {
+                "message": "GetNewIdsExOut",
+                "parameters": [
+                    {
+                        "name": "pstrIdList",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetNewIdsExResponse"
+            }
+        },
+        "GetCnxInfo": {
+            "kind": "static",
+            "soapAction": "xtk:session#GetCnxInfo",
+            "input": {
+                "message": "GetCnxInfoIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetCnxInfo"
+            },
+            "output": {
+                "message": "GetCnxInfoOut",
+                "parameters": [
+                    {
+                        "name": "pdomCnxInfo",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetCnxInfoResponse"
+            }
+        },
+        "FormatDataPolicy": {
+            "kind": "static",
+            "soapAction": "xtk:session#FormatDataPolicy",
+            "input": {
+                "message": "FormatDataPolicyIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDataPolicy",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strValue",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "FormatDataPolicy"
+            },
+            "output": {
+                "message": "FormatDataPolicyOut",
+                "parameters": [
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "FormatDataPolicyResponse"
+            }
+        },
+        "Encrypt": {
+            "kind": "static",
+            "soapAction": "xtk:session#Encrypt",
+            "input": {
+                "message": "EncryptIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDecrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Encrypt"
+            },
+            "output": {
+                "message": "EncryptOut",
+                "parameters": [
+                    {
+                        "name": "pstrEncrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EncryptResponse"
+            }
+        },
+        "ReEncryptPassword": {
+            "kind": "static",
+            "soapAction": "xtk:session#ReEncryptPassword",
+            "input": {
+                "message": "ReEncryptPasswordIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strOldPassword",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ReEncryptPassword"
+            },
+            "output": {
+                "message": "ReEncryptPasswordOut",
+                "parameters": [
+                    {
+                        "name": "pstrNewPassword",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ReEncryptPasswordResponse"
+            }
+        },
+        "EncryptPassword": {
+            "kind": "static",
+            "soapAction": "xtk:session#EncryptPassword",
+            "input": {
+                "message": "EncryptPasswordIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDecrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EncryptPassword"
+            },
+            "output": {
+                "message": "EncryptPasswordOut",
+                "parameters": [
+                    {
+                        "name": "pstrEncrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EncryptPasswordResponse"
+            }
+        },
+        "EncryptServerPassword": {
+            "kind": "static",
+            "soapAction": "xtk:session#EncryptServerPassword",
+            "input": {
+                "message": "EncryptServerPasswordIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDecrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EncryptServerPassword"
+            },
+            "output": {
+                "message": "EncryptServerPasswordOut",
+                "parameters": [
+                    {
+                        "name": "pstrEncrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "EncryptServerPasswordResponse"
+            }
+        },
+        "HashPassword": {
+            "kind": "static",
+            "soapAction": "xtk:session#HashPassword",
+            "input": {
+                "message": "HashPasswordIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDecrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "HashPassword"
+            },
+            "output": {
+                "message": "HashPasswordOut",
+                "parameters": [
+                    {
+                        "name": "pstrEncrypted",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "HashPasswordResponse"
+            }
+        },
+        "Diff": {
+            "kind": "static",
+            "soapAction": "xtk:session#Diff",
+            "input": {
+                "message": "DiffIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkPk",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Diff"
+            },
+            "output": {
+                "message": "DiffOut",
+                "parameters": [
+                    {
+                        "name": "pstrOriginal",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrCurrent",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DiffResponse"
+            }
+        },
+        "GetTAClientId": {
+            "kind": "static",
+            "soapAction": "xtk:session#GetTAClientId",
+            "input": {
+                "message": "GetTAClientIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetTAClientId"
+            },
+            "output": {
+                "message": "GetTAClientIdOut",
+                "parameters": [
+                    {
+                        "name": "pstrClientId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetTAClientIdResponse"
+            }
+        },
+        "SaveMarketingBuildNumber": {
+            "kind": "static",
+            "soapAction": "xtk:session#SaveMarketingBuildNumber",
+            "input": {
+                "message": "SaveMarketingBuildNumberIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strHostName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lBuildNum",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SaveMarketingBuildNumber"
+            },
+            "output": {
+                "message": "SaveMarketingBuildNumberOut",
+                "parameters": [],
+                "element": "SaveMarketingBuildNumberResponse"
+            }
+        }
+    }
+}

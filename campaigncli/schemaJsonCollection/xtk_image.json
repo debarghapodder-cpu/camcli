@@ -1,0 +1,12 @@
+{
+    "schema": "xtk:image",
+    "targetNamespace": "urn:xtk:image",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:image",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {}
+}

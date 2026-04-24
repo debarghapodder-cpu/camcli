@@ -1,0 +1,12 @@
+{
+    "schema": "xtk:javascript",
+    "targetNamespace": "urn:xtk:javascript",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:javascript",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {}
+}

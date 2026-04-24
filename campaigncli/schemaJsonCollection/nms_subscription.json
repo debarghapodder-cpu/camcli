@@ -1,0 +1,255 @@
+{
+    "schema": "nms:subscription",
+    "targetNamespace": "urn:nms:subscription",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:subscription",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "RecipientSubscribe": {
+            "kind": "static",
+            "soapAction": "nms:subscription#RecipientSubscribe",
+            "input": {
+                "message": "RecipientSubscribeIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemRecipientList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "elemServiceList",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bSubscribe",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "elemSendConfirmation",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "RecipientSubscribe"
+            },
+            "output": {
+                "message": "RecipientSubscribeOut",
+                "parameters": [
+                    {
+                        "name": "pelemConfirmationIds",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "RecipientSubscribeResponse"
+            }
+        },
+        "SendConfirmation": {
+            "kind": "static",
+            "soapAction": "nms:subscription#SendConfirmation",
+            "input": {
+                "message": "SendConfirmationIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strInternalName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strConfirmationId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SendConfirmation"
+            },
+            "output": {
+                "message": "SendConfirmationOut",
+                "parameters": [],
+                "element": "SendConfirmationResponse"
+            }
+        },
+        "Subscribe": {
+            "kind": "static",
+            "soapAction": "nms:subscription#Subscribe",
+            "input": {
+                "message": "SubscribeIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strServiceName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemRecipient",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bCreate",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "Subscribe"
+            },
+            "output": {
+                "message": "SubscribeOut",
+                "parameters": [],
+                "element": "SubscribeResponse"
+            }
+        },
+        "Unsubscribe": {
+            "kind": "static",
+            "soapAction": "nms:subscription#Unsubscribe",
+            "input": {
+                "message": "UnsubscribeIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strServiceName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemRecipient",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Unsubscribe"
+            },
+            "output": {
+                "message": "UnsubscribeOut",
+                "parameters": [],
+                "element": "UnsubscribeResponse"
+            }
+        },
+        "DeleteService": {
+            "kind": "static",
+            "soapAction": "nms:subscription#DeleteService",
+            "input": {
+                "message": "DeleteServiceIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DeleteService"
+            },
+            "output": {
+                "message": "DeleteServiceOut",
+                "parameters": [],
+                "element": "DeleteServiceResponse"
+            }
+        },
+        "GetAccessToken": {
+            "kind": "static",
+            "soapAction": "nms:subscription#GetAccessToken",
+            "input": {
+                "message": "GetAccessTokenIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strClientEmailId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strClientPrivateKey",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strProjectId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetAccessToken"
+            },
+            "output": {
+                "message": "GetAccessTokenOut",
+                "parameters": [],
+                "element": "GetAccessTokenResponse"
+            }
+        },
+        "ExtractProjectDetailsFromJson": {
+            "kind": "static",
+            "soapAction": "nms:subscription#ExtractProjectDetailsFromJson",
+            "input": {
+                "message": "ExtractProjectDetailsFromJsonIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strProjectFileName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExtractProjectDetailsFromJson"
+            },
+            "output": {
+                "message": "ExtractProjectDetailsFromJsonOut",
+                "parameters": [
+                    {
+                        "name": "pstrProjectId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrClientEmailId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrClientPrivateKey",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExtractProjectDetailsFromJsonResponse"
+            }
+        }
+    }
+}

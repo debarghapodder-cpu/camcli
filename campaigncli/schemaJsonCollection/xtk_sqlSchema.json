@@ -1,0 +1,226 @@
+{
+    "schema": "xtk:sqlSchema",
+    "targetNamespace": "urn:xtk:sqlSchema",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:sqlSchema",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "Generate": {
+            "kind": "static",
+            "soapAction": "xtk:sqlSchema#Generate",
+            "input": {
+                "message": "GenerateIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Generate"
+            },
+            "output": {
+                "message": "GenerateOut",
+                "parameters": [],
+                "element": "GenerateResponse"
+            }
+        },
+        "PatchSrcSchemas": {
+            "kind": "static",
+            "soapAction": "xtk:sqlSchema#PatchSrcSchemas",
+            "input": {
+                "message": "PatchSrcSchemasIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PatchSrcSchemas"
+            },
+            "output": {
+                "message": "PatchSrcSchemasOut",
+                "parameters": [
+                    {
+                        "name": "pelemOutput",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PatchSrcSchemasResponse"
+            }
+        },
+        "UpdateFieldProp": {
+            "kind": "static",
+            "soapAction": "xtk:sqlSchema#UpdateFieldProp",
+            "input": {
+                "message": "UpdateFieldPropIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateFieldProp"
+            },
+            "output": {
+                "message": "UpdateFieldPropOut",
+                "parameters": [],
+                "element": "UpdateFieldPropResponse"
+            }
+        },
+        "UpdateSchema": {
+            "kind": "static",
+            "soapAction": "xtk:sqlSchema#UpdateSchema",
+            "input": {
+                "message": "UpdateSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "UpdateSchema"
+            },
+            "output": {
+                "message": "UpdateSchemaOut",
+                "parameters": [],
+                "element": "UpdateSchemaResponse"
+            }
+        },
+        "BuildTableList": {
+            "kind": "static",
+            "soapAction": "xtk:sqlSchema#BuildTableList",
+            "input": {
+                "message": "BuildTableListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDataSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTablePattern",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BuildTableList"
+            },
+            "output": {
+                "message": "BuildTableListOut",
+                "parameters": [
+                    {
+                        "name": "pdomTableList",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildTableListResponse"
+            }
+        },
+        "BuildSqlSchema": {
+            "kind": "static",
+            "soapAction": "xtk:sqlSchema#BuildSqlSchema",
+            "input": {
+                "message": "BuildSqlSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDataSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTableName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "BuildSqlSchema"
+            },
+            "output": {
+                "message": "BuildSqlSchemaOut",
+                "parameters": [
+                    {
+                        "name": "pdomSchema",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildSqlSchemaResponse"
+            }
+        },
+        "BuildAndInstallSchemas": {
+            "kind": "static",
+            "soapAction": "xtk:sqlSchema#BuildAndInstallSchemas",
+            "input": {
+                "message": "BuildAndInstallSchemasIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "dataSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "namespace",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tableList",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "BuildAndInstallSchemas"
+            },
+            "output": {
+                "message": "BuildAndInstallSchemasOut",
+                "parameters": [],
+                "element": "BuildAndInstallSchemasResponse"
+            }
+        }
+    }
+}

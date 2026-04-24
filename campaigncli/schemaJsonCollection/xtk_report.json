@@ -1,0 +1,997 @@
+{
+    "schema": "xtk:report",
+    "targetNamespace": "urn:xtk:report",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:report",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "GetSourceAsHtml": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetSourceAsHtml",
+            "input": {
+                "message": "GetSourceAsHtmlIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemForm",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strRenderer",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetSourceAsHtml"
+            },
+            "output": {
+                "message": "GetSourceAsHtmlOut",
+                "parameters": [
+                    {
+                        "name": "pstrSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pelemLogs",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetSourceAsHtmlResponse"
+            }
+        },
+        "GetSource": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetSource",
+            "input": {
+                "message": "GetSourceIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFormId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTarget",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bCompiled",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "strVersion",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetSource"
+            },
+            "output": {
+                "message": "GetSourceOut",
+                "parameters": [
+                    {
+                        "name": "pstrSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pelemLogs",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetSourceResponse"
+            }
+        },
+        "GetInputValues": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetInputValues",
+            "input": {
+                "message": "GetInputValuesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemInput",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetInputValues"
+            },
+            "output": {
+                "message": "GetInputValuesOut",
+                "parameters": [
+                    {
+                        "name": "pelemOptions",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetInputValuesResponse"
+            }
+        },
+        "FillSteps": {
+            "kind": "static",
+            "soapAction": "xtk:report#FillSteps",
+            "input": {
+                "message": "FillStepsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExpr",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lClassCount",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "FillSteps"
+            },
+            "output": {
+                "message": "FillStepsOut",
+                "parameters": [
+                    {
+                        "name": "pelemSamplingSteps",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "FillStepsResponse"
+            }
+        },
+        "FillStepsWithFilter": {
+            "kind": "static",
+            "soapAction": "xtk:report#FillStepsWithFilter",
+            "input": {
+                "message": "FillStepsWithFilterIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExpr",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lClassCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "elemFilter",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "FillStepsWithFilter"
+            },
+            "output": {
+                "message": "FillStepsWithFilterOut",
+                "parameters": [
+                    {
+                        "name": "pelemSamplingSteps",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "FillStepsWithFilterResponse"
+            }
+        },
+        "SelectTopValues": {
+            "kind": "static",
+            "soapAction": "xtk:report#SelectTopValues",
+            "input": {
+                "message": "SelectTopValuesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExpr",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lClassCount",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SelectTopValues"
+            },
+            "output": {
+                "message": "SelectTopValuesOut",
+                "parameters": [
+                    {
+                        "name": "pelemSelectedValues",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SelectTopValuesResponse"
+            }
+        },
+        "GetDescriptiveAnalysisData": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetDescriptiveAnalysisData",
+            "input": {
+                "message": "GetDescriptiveAnalysisDataIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemEntity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "domContext",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDescriptiveAnalysisData"
+            },
+            "output": {
+                "message": "GetDescriptiveAnalysisDataOut",
+                "parameters": [
+                    {
+                        "name": "pdomData",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetDescriptiveAnalysisDataResponse"
+            }
+        },
+        "DisplayDescriptiveAnalysis": {
+            "kind": "static",
+            "soapAction": "xtk:report#DisplayDescriptiveAnalysis",
+            "input": {
+                "message": "DisplayDescriptiveAnalysisIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domEntity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strServerUrl",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DisplayDescriptiveAnalysis"
+            },
+            "output": {
+                "message": "DisplayDescriptiveAnalysisOut",
+                "parameters": [
+                    {
+                        "name": "pstrHtml",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DisplayDescriptiveAnalysisResponse"
+            }
+        },
+        "DisplayDescriptiveAnalysisEx": {
+            "kind": "static",
+            "soapAction": "xtk:report#DisplayDescriptiveAnalysisEx",
+            "input": {
+                "message": "DisplayDescriptiveAnalysisExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemEntity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "elemExecContext",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strServerUrl",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DisplayDescriptiveAnalysisEx"
+            },
+            "output": {
+                "message": "DisplayDescriptiveAnalysisExOut",
+                "parameters": [
+                    {
+                        "name": "pstrHtml",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DisplayDescriptiveAnalysisExResponse"
+            }
+        },
+        "GenerateAnalysisWidget": {
+            "kind": "static",
+            "soapAction": "xtk:report#GenerateAnalysisWidget",
+            "input": {
+                "message": "GenerateAnalysisWidgetIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domEntity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strJavascriptId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domQueryResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateAnalysisWidget"
+            },
+            "output": {
+                "message": "GenerateAnalysisWidgetOut",
+                "parameters": [
+                    {
+                        "name": "pdomJavascript",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateAnalysisWidgetResponse"
+            }
+        },
+        "RegisterTransientSchema": {
+            "kind": "static",
+            "soapAction": "xtk:report#RegisterTransientSchema",
+            "input": {
+                "message": "RegisterTransientSchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strLabel",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSqltable",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemQuery",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "RegisterTransientSchema"
+            },
+            "output": {
+                "message": "RegisterTransientSchemaOut",
+                "parameters": [],
+                "element": "RegisterTransientSchemaResponse"
+            }
+        },
+        "ExecuteTransientQuery": {
+            "kind": "static",
+            "soapAction": "xtk:report#ExecuteTransientQuery",
+            "input": {
+                "message": "ExecuteTransientQueryIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strLabel",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSqltable",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemQuery",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteTransientQuery"
+            },
+            "output": {
+                "message": "ExecuteTransientQueryOut",
+                "parameters": [],
+                "element": "ExecuteTransientQueryResponse"
+            }
+        },
+        "GetReportList": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetReportList",
+            "input": {
+                "message": "GetReportListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strActiveContext",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSelection",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strLocationName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetReportList"
+            },
+            "output": {
+                "message": "GetReportListOut",
+                "parameters": [
+                    {
+                        "name": "pdomReports",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetReportListResponse"
+            }
+        },
+        "GetAvailableReports": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetAvailableReports",
+            "input": {
+                "message": "GetAvailableReportsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strActiveContext",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSelection",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strLocationName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFilter",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetAvailableReports"
+            },
+            "output": {
+                "message": "GetAvailableReportsOut",
+                "parameters": [
+                    {
+                        "name": "pdomReports",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetAvailableReportsResponse"
+            }
+        },
+        "GetAvailableReportsEx": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetAvailableReportsEx",
+            "input": {
+                "message": "GetAvailableReportsExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strActiveContext",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSelection",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domWhere",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "domOrderBy",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "lEditionMode",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lLineCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lStartLine",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "strLocationName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetAvailableReportsEx"
+            },
+            "output": {
+                "message": "GetAvailableReportsExOut",
+                "parameters": [
+                    {
+                        "name": "pdomReports",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetAvailableReportsExResponse"
+            }
+        },
+        "Save": {
+            "kind": "static",
+            "soapAction": "xtk:report#Save",
+            "input": {
+                "message": "SaveIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemData",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strReportName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Save"
+            },
+            "output": {
+                "message": "SaveOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SaveResponse"
+            }
+        },
+        "Publish": {
+            "kind": "static",
+            "soapAction": "xtk:report#Publish",
+            "input": {
+                "message": "PublishIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Publish"
+            },
+            "output": {
+                "message": "PublishOut",
+                "parameters": [],
+                "element": "PublishResponse"
+            }
+        },
+        "DictionaryCheck": {
+            "kind": "static",
+            "soapAction": "xtk:report#DictionaryCheck",
+            "input": {
+                "message": "DictionaryCheckIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DictionaryCheck"
+            },
+            "output": {
+                "message": "DictionaryCheckOut",
+                "parameters": [
+                    {
+                        "name": "pelemStats",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "DictionaryCheckResponse"
+            }
+        },
+        "GenerateAndSaveReport": {
+            "kind": "static",
+            "soapAction": "xtk:report#GenerateAndSaveReport",
+            "input": {
+                "message": "GenerateAndSaveReportIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strReportName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domContext",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateAndSaveReport"
+            },
+            "output": {
+                "message": "GenerateAndSaveReportOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateAndSaveReportResponse"
+            }
+        },
+        "GenerateFlatReport": {
+            "kind": "static",
+            "soapAction": "xtk:report#GenerateFlatReport",
+            "input": {
+                "message": "GenerateFlatReportIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strReportName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domContext",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateFlatReport"
+            },
+            "output": {
+                "message": "GenerateFlatReportOut",
+                "parameters": [
+                    {
+                        "name": "pdomFlatReport",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateFlatReportResponse"
+            }
+        },
+        "ExportDescriptiveAnalysis": {
+            "kind": "static",
+            "soapAction": "xtk:report#ExportDescriptiveAnalysis",
+            "input": {
+                "message": "ExportDescriptiveAnalysisIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domEntity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "domExecContext",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strExportFormat",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExportDescriptiveAnalysis"
+            },
+            "output": {
+                "message": "ExportDescriptiveAnalysisOut",
+                "parameters": [
+                    {
+                        "name": "pstrFileName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "ExportDescriptiveAnalysisResponse"
+            }
+        },
+        "Export": {
+            "kind": "static",
+            "soapAction": "xtk:report#Export",
+            "input": {
+                "message": "ExportIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strReportName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domContext",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strExportFormat",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFileName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bIsAdHoc",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "Export"
+            },
+            "output": {
+                "message": "ExportOut",
+                "parameters": [],
+                "element": "ExportResponse"
+            }
+        },
+        "exportSaved": {
+            "kind": "static",
+            "soapAction": "xtk:report#exportSaved",
+            "input": {
+                "message": "exportSavedIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "reportHistoryId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "exportFormat",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "fileName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "exportSaved"
+            },
+            "output": {
+                "message": "exportSavedOut",
+                "parameters": [],
+                "element": "exportSavedResponse"
+            }
+        },
+        "GetUsedLanguagesEnum": {
+            "kind": "static",
+            "soapAction": "xtk:report#GetUsedLanguagesEnum",
+            "input": {
+                "message": "GetUsedLanguagesEnumIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDesignLanguage",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strDefaultLanguage",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemAdditionalLanguages",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetUsedLanguagesEnum"
+            },
+            "output": {
+                "message": "GetUsedLanguagesEnumOut",
+                "parameters": [
+                    {
+                        "name": "pelemEnum",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetUsedLanguagesEnumResponse"
+            }
+        }
+    }
+}

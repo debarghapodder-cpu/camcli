@@ -1,0 +1,421 @@
+{
+    "schema": "ncm:publishing",
+    "targetNamespace": "urn:ncm:publishing",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:ncm:publishing",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "TransformXSLT": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#TransformXSLT",
+            "input": {
+                "message": "TransformXSLTIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strNamespace",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFormat",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkContentId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformXSLT"
+            },
+            "output": {
+                "message": "TransformXSLTOut",
+                "parameters": [
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformXSLTResponse"
+            }
+        },
+        "CheckXSLT": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#CheckXSLT",
+            "input": {
+                "message": "CheckXSLTIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strNamespace",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CheckXSLT"
+            },
+            "output": {
+                "message": "CheckXSLTOut",
+                "parameters": [],
+                "element": "CheckXSLTResponse"
+            }
+        },
+        "TransformJavaScript": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#TransformJavaScript",
+            "input": {
+                "message": "TransformJavaScriptIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFormat",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkContentId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformJavaScript"
+            },
+            "output": {
+                "message": "TransformJavaScriptOut",
+                "parameters": [
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformJavaScriptResponse"
+            }
+        },
+        "TransformJavaScriptDOM": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#TransformJavaScriptDOM",
+            "input": {
+                "message": "TransformJavaScriptDOMIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strFormat",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkContentId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformJavaScriptDOM"
+            },
+            "output": {
+                "message": "TransformJavaScriptDOMOut",
+                "parameters": [
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformJavaScriptDOMResponse"
+            }
+        },
+        "CheckJavaScript": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#CheckJavaScript",
+            "input": {
+                "message": "CheckJavaScriptIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSource",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CheckJavaScript"
+            },
+            "output": {
+                "message": "CheckJavaScriptOut",
+                "parameters": [],
+                "element": "CheckJavaScriptResponse"
+            }
+        },
+        "Transform": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#Transform",
+            "input": {
+                "message": "TransformIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPublishingId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strModelName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Transform"
+            },
+            "output": {
+                "message": "TransformOut",
+                "parameters": [
+                    {
+                        "name": "pstrFormat",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformResponse"
+            }
+        },
+        "TransformFromId": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#TransformFromId",
+            "input": {
+                "message": "TransformFromIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPublishingId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strModelName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkContentId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformFromId"
+            },
+            "output": {
+                "message": "TransformFromIdOut",
+                "parameters": [
+                    {
+                        "name": "pstrFormat",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrResult",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TransformFromIdResponse"
+            }
+        },
+        "GenerateFromSel": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#GenerateFromSel",
+            "input": {
+                "message": "GenerateFromSelIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemContentList",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateFromSel"
+            },
+            "output": {
+                "message": "GenerateFromSelOut",
+                "parameters": [],
+                "element": "GenerateFromSelResponse"
+            }
+        },
+        "GenerateFromId": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#GenerateFromId",
+            "input": {
+                "message": "GenerateFromIdIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPublishingDir",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateFromId"
+            },
+            "output": {
+                "message": "GenerateFromIdOut",
+                "parameters": [
+                    {
+                        "name": "pstrOutputFiles",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateFromIdResponse"
+            }
+        },
+        "GenerateForDelivery": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#GenerateForDelivery",
+            "input": {
+                "message": "GenerateForDeliveryIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pkContentId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strScenarioId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateForDelivery"
+            },
+            "output": {
+                "message": "GenerateForDeliveryOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GenerateForDeliveryResponse"
+            }
+        },
+        "LoadContent": {
+            "kind": "static",
+            "soapAction": "ncm:publishing#LoadContent",
+            "input": {
+                "message": "LoadContentIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pklPkList",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "LoadContent"
+            },
+            "output": {
+                "message": "LoadContentOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "LoadContentResponse"
+            }
+        }
+    }
+}

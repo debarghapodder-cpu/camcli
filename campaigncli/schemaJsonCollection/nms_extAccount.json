@@ -1,0 +1,868 @@
+{
+    "schema": "nms:extAccount",
+    "targetNamespace": "urn:nms:extAccount",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:extAccount",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "TestAccount": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#TestAccount",
+            "input": {
+                "message": "TestAccountIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "btType",
+                        "type": "byte",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrServer",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strAccount",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPassword",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPort",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strOptions",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bOauth",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "strAzureTenant",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strClientId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strClientSecret",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strRedirectUrl",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TestAccount"
+            },
+            "output": {
+                "message": "TestAccountOut",
+                "parameters": [
+                    {
+                        "name": "pstrServer",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrDbmsVer",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrWarehouse",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrTestDuration",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "TestAccountResponse"
+            }
+        },
+        "CreateFDASchema": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#CreateFDASchema",
+            "input": {
+                "message": "CreateFDASchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strServer",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strAccount",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPassword",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strPort",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strOptions",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strSchema",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CreateFDASchema"
+            },
+            "output": {
+                "message": "CreateFDASchemaOut",
+                "parameters": [],
+                "element": "CreateFDASchemaResponse"
+            }
+        },
+        "DeploySQLFunctions": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#DeploySQLFunctions",
+            "input": {
+                "message": "DeploySQLFunctionsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "extAccountId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DeploySQLFunctions"
+            },
+            "output": {
+                "message": "DeploySQLFunctionsOut",
+                "parameters": [],
+                "element": "DeploySQLFunctionsResponse"
+            }
+        },
+        "DeclareTableSpaces": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#DeclareTableSpaces",
+            "input": {
+                "message": "DeclareTableSpacesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "extAccountId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tableSpace",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tableSpaceIndex",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DeclareTableSpaces"
+            },
+            "output": {
+                "message": "DeclareTableSpacesOut",
+                "parameters": [],
+                "element": "DeclareTableSpacesResponse"
+            }
+        },
+        "CleanupWorkTables": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#CleanupWorkTables",
+            "input": {
+                "message": "CleanupWorkTablesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strExtAccountId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CleanupWorkTables"
+            },
+            "output": {
+                "message": "CleanupWorkTablesOut",
+                "parameters": [],
+                "element": "CleanupWorkTablesResponse"
+            }
+        },
+        "CleanupAllWorkTables": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#CleanupAllWorkTables",
+            "input": {
+                "message": "CleanupAllWorkTablesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "CleanupAllWorkTables"
+            },
+            "output": {
+                "message": "CleanupAllWorkTablesOut",
+                "parameters": [],
+                "element": "CleanupAllWorkTablesResponse"
+            }
+        },
+        "doSave": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#doSave",
+            "input": {
+                "message": "doSaveIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "doSave"
+            },
+            "output": {
+                "message": "doSaveOut",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "doSaveResponse"
+            }
+        },
+        "saveSegmentSelection": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#saveSegmentSelection",
+            "input": {
+                "message": "saveSegmentSelectionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "saveSegmentSelection"
+            },
+            "output": {
+                "message": "saveSegmentSelectionOut",
+                "parameters": [],
+                "element": "saveSegmentSelectionResponse"
+            }
+        },
+        "crmSelectAll": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#crmSelectAll",
+            "input": {
+                "message": "crmSelectAllIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "input",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "value",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "crmName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "crmSelectAll"
+            },
+            "output": {
+                "message": "crmSelectAllOut",
+                "parameters": [
+                    {
+                        "name": "output",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "crmSelectAllResponse"
+            }
+        },
+        "crmEnumerationList": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#crmEnumerationList",
+            "input": {
+                "message": "crmEnumerationListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "xmlExtAccount",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "crmEnumerationList"
+            },
+            "output": {
+                "message": "crmEnumerationListOut",
+                "parameters": [
+                    {
+                        "name": "output",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "crmEnumerationListResponse"
+            }
+        },
+        "crmCopyToDbEnum": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#crmCopyToDbEnum",
+            "input": {
+                "message": "crmCopyToDbEnumIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "xmlExtAccount",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "crmCopyToDbEnum"
+            },
+            "output": {
+                "message": "crmCopyToDbEnumOut",
+                "parameters": [
+                    {
+                        "name": "output",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "crmCopyToDbEnumResponse"
+            }
+        },
+        "mscrmTableList": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#mscrmTableList",
+            "input": {
+                "message": "mscrmTableListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "extAccount",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "login",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "server",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "company",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "accountName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "crmVersion",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "crmDeploymentType",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "crmGrantType",
+                        "type": "byte",
+                        "required": true
+                    },
+                    {
+                        "name": "privateKey",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "x5t",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "jwtId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "mscrmTableList"
+            },
+            "output": {
+                "message": "mscrmTableListOut",
+                "parameters": [
+                    {
+                        "name": "remote",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "mscrmTableListResponse"
+            }
+        },
+        "mscrmDeploy": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#mscrmDeploy",
+            "input": {
+                "message": "mscrmDeployIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "extAccount",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "login",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "server",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "company",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "accountName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "crmDeploymentType",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "crmVersion",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "crmGrantType",
+                        "type": "byte",
+                        "required": true
+                    },
+                    {
+                        "name": "privateKey",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "x5t",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "jwtId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "mscrmDeploy"
+            },
+            "output": {
+                "message": "mscrmDeployOut",
+                "parameters": [
+                    {
+                        "name": "deployed",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "mscrmDeployResponse"
+            }
+        },
+        "sfdcTableList": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#sfdcTableList",
+            "input": {
+                "message": "sfdcTableListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "extAccount",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "login",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "clientId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "securityToken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "sandboxMode",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "apiVersion",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "accountName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "sfdcTableList"
+            },
+            "output": {
+                "message": "sfdcTableListOut",
+                "parameters": [
+                    {
+                        "name": "remote",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "sfdcTableListResponse"
+            }
+        },
+        "sfdcDeploy": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#sfdcDeploy",
+            "input": {
+                "message": "sfdcDeployIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "extAccount",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "login",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "clientId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "securityToken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "sandboxMode",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "apiVersion",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "accountName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "sfdcDeploy"
+            },
+            "output": {
+                "message": "sfdcDeployOut",
+                "parameters": [
+                    {
+                        "name": "deployed",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "sfdcDeployResponse"
+            }
+        },
+        "sfdcRemoteWebLinkList": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#sfdcRemoteWebLinkList",
+            "input": {
+                "message": "sfdcRemoteWebLinkListIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "extAccount",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "login",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "clientId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "securityToken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "sandboxMode",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "apiVersion",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "accountName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "sfdcRemoteWebLinkList"
+            },
+            "output": {
+                "message": "sfdcRemoteWebLinkListOut",
+                "parameters": [
+                    {
+                        "name": "webLinks",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "error",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "sfdcRemoteWebLinkListResponse"
+            }
+        },
+        "sfdcUpsertWebLinks": {
+            "kind": "static",
+            "soapAction": "nms:extAccount#sfdcUpsertWebLinks",
+            "input": {
+                "message": "sfdcUpsertWebLinksIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "webLinks",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "login",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "clientId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "securityToken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "sandboxMode",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "apiVersion",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "accountName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "sfdcUpsertWebLinks"
+            },
+            "output": {
+                "message": "sfdcUpsertWebLinksOut",
+                "parameters": [],
+                "element": "sfdcUpsertWebLinksResponse"
+            }
+        }
+    }
+}

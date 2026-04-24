@@ -1,0 +1,75 @@
+{
+    "schema": "nms:rtEvent",
+    "targetNamespace": "urn:nms:rtEvent",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:rtEvent",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "PushEvent": {
+            "kind": "static",
+            "soapAction": "nms:rtEvent#PushEvent",
+            "input": {
+                "message": "PushEventIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domEvent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PushEvent"
+            },
+            "output": {
+                "message": "PushEventOut",
+                "parameters": [
+                    {
+                        "name": "plId",
+                        "type": "long",
+                        "required": true
+                    }
+                ],
+                "element": "PushEventResponse"
+            }
+        },
+        "PushEvents": {
+            "kind": "static",
+            "soapAction": "nms:rtEvent#PushEvents",
+            "input": {
+                "message": "PushEventsIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "domEventCollection",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PushEvents"
+            },
+            "output": {
+                "message": "PushEventsOut",
+                "parameters": [
+                    {
+                        "name": "pdomIds",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "PushEventsResponse"
+            }
+        }
+    }
+}

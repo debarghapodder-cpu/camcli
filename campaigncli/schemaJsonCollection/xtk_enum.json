@@ -1,0 +1,194 @@
+{
+    "schema": "xtk:enum",
+    "targetNamespace": "urn:xtk:enum",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:enum",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "AliasCleansing": {
+            "kind": "static",
+            "soapAction": "xtk:enum#AliasCleansing",
+            "input": {
+                "message": "AliasCleansingIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemWhere",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "tmFromDate",
+                        "type": "dateTime",
+                        "required": true
+                    },
+                    {
+                        "name": "bRefreshHit",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "bResetHit",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "AliasCleansing"
+            },
+            "output": {
+                "message": "AliasCleansingOut",
+                "parameters": [],
+                "element": "AliasCleansingResponse"
+            }
+        },
+        "GetCleanedValue": {
+            "kind": "static",
+            "soapAction": "xtk:enum#GetCleanedValue",
+            "input": {
+                "message": "GetCleanedValueIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lEnumId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "strAlias",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetCleanedValue"
+            },
+            "output": {
+                "message": "GetCleanedValueOut",
+                "parameters": [
+                    {
+                        "name": "pstrValue",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetCleanedValueResponse"
+            }
+        },
+        "SwitchValuesAndAliases": {
+            "kind": "static",
+            "soapAction": "xtk:enum#SwitchValuesAndAliases",
+            "input": {
+                "message": "SwitchValuesAndAliasesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemEnums",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "strMode",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SwitchValuesAndAliases"
+            },
+            "output": {
+                "message": "SwitchValuesAndAliasesOut",
+                "parameters": [],
+                "element": "SwitchValuesAndAliasesResponse"
+            }
+        },
+        "FinalizeSwitchOrder": {
+            "kind": "static",
+            "soapAction": "xtk:enum#FinalizeSwitchOrder",
+            "input": {
+                "message": "FinalizeSwitchOrderIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lEnumId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lValueOld",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lValue",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "FinalizeSwitchOrder"
+            },
+            "output": {
+                "message": "FinalizeSwitchOrderOut",
+                "parameters": [],
+                "element": "FinalizeSwitchOrderResponse"
+            }
+        },
+        "FinalizeMoveToReserve": {
+            "kind": "static",
+            "soapAction": "xtk:enum#FinalizeMoveToReserve",
+            "input": {
+                "message": "FinalizeMoveToReserveIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lEnumId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lEmticonReservedOrder",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "lValueStart",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "FinalizeMoveToReserve"
+            },
+            "output": {
+                "message": "FinalizeMoveToReserveOut",
+                "parameters": [],
+                "element": "FinalizeMoveToReserveResponse"
+            }
+        }
+    }
+}

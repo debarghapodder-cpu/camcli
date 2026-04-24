@@ -1,0 +1,38 @@
+{
+    "schema": "xtk:sql",
+    "targetNamespace": "urn:xtk:sql",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:sql",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "Execute": {
+            "kind": "static",
+            "soapAction": "xtk:sql#Execute",
+            "input": {
+                "message": "ExecuteIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Execute"
+            },
+            "output": {
+                "message": "ExecuteOut",
+                "parameters": [],
+                "element": "ExecuteResponse"
+            }
+        }
+    }
+}

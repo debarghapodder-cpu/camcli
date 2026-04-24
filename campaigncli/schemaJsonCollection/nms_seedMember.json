@@ -1,0 +1,59 @@
+{
+    "schema": "nms:seedMember",
+    "targetNamespace": "urn:nms:seedMember",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:seedMember",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "getAsModel": {
+            "kind": "static",
+            "soapAction": "nms:seedMember#getAsModel",
+            "input": {
+                "message": "getAsModelIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "refIdName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "refIdValue",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "selection",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "parentIn",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "getAsModel"
+            },
+            "output": {
+                "message": "getAsModelOut",
+                "parameters": [
+                    {
+                        "name": "parentOut",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "getAsModelResponse"
+            }
+        }
+    }
+}

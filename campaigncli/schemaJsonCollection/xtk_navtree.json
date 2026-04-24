@@ -1,0 +1,12 @@
+{
+    "schema": "xtk:navtree",
+    "targetNamespace": "urn:xtk:navtree",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:navtree",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {}
+}

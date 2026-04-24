@@ -1,0 +1,1102 @@
+{
+    "schema": "xtk:workflow",
+    "targetNamespace": "urn:xtk:workflow",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:xtk:workflow",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "Start": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Start",
+            "input": {
+                "message": "StartIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Start"
+            },
+            "output": {
+                "message": "StartOut",
+                "parameters": [],
+                "element": "StartResponse"
+            }
+        },
+        "Pause": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Pause",
+            "input": {
+                "message": "PauseIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Pause"
+            },
+            "output": {
+                "message": "PauseOut",
+                "parameters": [],
+                "element": "PauseResponse"
+            }
+        },
+        "Stop": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Stop",
+            "input": {
+                "message": "StopIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Stop"
+            },
+            "output": {
+                "message": "StopOut",
+                "parameters": [],
+                "element": "StopResponse"
+            }
+        },
+        "Kill": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Kill",
+            "input": {
+                "message": "KillIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Kill"
+            },
+            "output": {
+                "message": "KillOut",
+                "parameters": [],
+                "element": "KillResponse"
+            }
+        },
+        "Restart": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Restart",
+            "input": {
+                "message": "RestartIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Restart"
+            },
+            "output": {
+                "message": "RestartOut",
+                "parameters": [],
+                "element": "RestartResponse"
+            }
+        },
+        "Cleanup": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Cleanup",
+            "input": {
+                "message": "CleanupIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Cleanup"
+            },
+            "output": {
+                "message": "CleanupOut",
+                "parameters": [],
+                "element": "CleanupResponse"
+            }
+        },
+        "Simulate": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Simulate",
+            "input": {
+                "message": "SimulateIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Simulate"
+            },
+            "output": {
+                "message": "SimulateOut",
+                "parameters": [],
+                "element": "SimulateResponse"
+            }
+        },
+        "Wakeup": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Wakeup",
+            "input": {
+                "message": "WakeupIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Wakeup"
+            },
+            "output": {
+                "message": "WakeupOut",
+                "parameters": [],
+                "element": "WakeupResponse"
+            }
+        },
+        "WakeupTask": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#WakeupTask",
+            "input": {
+                "message": "WakeupTaskIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTaskIdentifier",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strActivityName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "WakeupTask"
+            },
+            "output": {
+                "message": "WakeupTaskOut",
+                "parameters": [],
+                "element": "WakeupTaskResponse"
+            }
+        },
+        "RestartTask": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#RestartTask",
+            "input": {
+                "message": "RestartTaskIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strActivityName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "RestartTask"
+            },
+            "output": {
+                "message": "RestartTaskOut",
+                "parameters": [],
+                "element": "RestartTaskResponse"
+            }
+        },
+        "DeleteResult": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#DeleteResult",
+            "input": {
+                "message": "DeleteResultIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strActivityName",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "DeleteResult"
+            },
+            "output": {
+                "message": "DeleteResultOut",
+                "parameters": [],
+                "element": "DeleteResultResponse"
+            }
+        },
+        "Execute": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Execute",
+            "input": {
+                "message": "ExecuteIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bSimulationMode",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "bKeepResult",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "bLogSQL",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "Execute"
+            },
+            "output": {
+                "message": "ExecuteOut",
+                "parameters": [
+                    {
+                        "name": "pelemWorkflow",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteResponse"
+            }
+        },
+        "ExecuteInstance": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#ExecuteInstance",
+            "input": {
+                "message": "ExecuteInstanceIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "entity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bSimulationMode",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "bKeepResult",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "bLogSQL",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "ExecuteInstance"
+            },
+            "output": {
+                "message": "ExecuteInstanceOut",
+                "parameters": [],
+                "element": "ExecuteInstanceResponse"
+            }
+        },
+        "GetValidationParameters": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#GetValidationParameters",
+            "input": {
+                "message": "GetValidationParametersIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTaskIdentifier",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetValidationParameters"
+            },
+            "output": {
+                "message": "GetValidationParametersOut",
+                "parameters": [
+                    {
+                        "name": "pdomContent",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "GetValidationParametersResponse"
+            }
+        },
+        "Reply": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Reply",
+            "input": {
+                "message": "ReplyIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTaskIdentifier",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strResponse",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strChoice",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "Reply"
+            },
+            "output": {
+                "message": "ReplyOut",
+                "parameters": [],
+                "element": "ReplyResponse"
+            }
+        },
+        "StartWithParameters": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#StartWithParameters",
+            "input": {
+                "message": "StartWithParametersIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "StartWithParameters"
+            },
+            "output": {
+                "message": "StartWithParametersOut",
+                "parameters": [],
+                "element": "StartWithParametersResponse"
+            }
+        },
+        "SimulateWithParameters": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SimulateWithParameters",
+            "input": {
+                "message": "SimulateWithParametersIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SimulateWithParameters"
+            },
+            "output": {
+                "message": "SimulateWithParametersOut",
+                "parameters": [],
+                "element": "SimulateWithParametersResponse"
+            }
+        },
+        "SpawnWithParameters": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SpawnWithParameters",
+            "input": {
+                "message": "SpawnWithParametersIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SpawnWithParameters"
+            },
+            "output": {
+                "message": "SpawnWithParametersOut",
+                "parameters": [
+                    {
+                        "name": "plInstanceId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SpawnWithParametersResponse"
+            }
+        },
+        "SpawnWithParametersEx": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SpawnWithParametersEx",
+            "input": {
+                "message": "SpawnWithParametersExIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "bSimulation",
+                        "type": "boolean",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SpawnWithParametersEx"
+            },
+            "output": {
+                "message": "SpawnWithParametersExOut",
+                "parameters": [
+                    {
+                        "name": "plInstanceId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SpawnWithParametersExResponse"
+            }
+        },
+        "Spawn": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#Spawn",
+            "input": {
+                "message": "SpawnIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemPatch",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "Spawn"
+            },
+            "output": {
+                "message": "SpawnOut",
+                "parameters": [
+                    {
+                        "name": "plInstanceId",
+                        "type": "int",
+                        "required": true
+                    }
+                ],
+                "element": "SpawnResponse"
+            }
+        },
+        "PostEvent": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#PostEvent",
+            "input": {
+                "message": "PostEventIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strActivity",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strTransition",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "elemParameters",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "bComplete",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "PostEvent"
+            },
+            "output": {
+                "message": "PostEventOut",
+                "parameters": [],
+                "element": "PostEventResponse"
+            }
+        },
+        "GetLogin": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#GetLogin",
+            "input": {
+                "message": "GetLoginIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetLogin"
+            },
+            "output": {
+                "message": "GetLoginOut",
+                "parameters": [
+                    {
+                        "name": "plId",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrLogin",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "pstrCs",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "GetLoginResponse"
+            }
+        },
+        "SetLogin": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SetLogin",
+            "input": {
+                "message": "SetLoginIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strWorkflowId",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "strLogin",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SetLogin"
+            },
+            "output": {
+                "message": "SetLoginOut",
+                "parameters": [],
+                "element": "SetLoginResponse"
+            }
+        },
+        "CrmMscrmTestImportActivity_V1": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#CrmMscrmTestImportActivity_V1",
+            "input": {
+                "message": "CrmMscrmTestImportActivity_V1In",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "inActivity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CrmMscrmTestImportActivity_V1"
+            },
+            "output": {
+                "message": "CrmMscrmTestImportActivity_V1Out",
+                "parameters": [],
+                "element": "CrmMscrmTestImportActivity_V1Response"
+            }
+        },
+        "CrmSfdcTestImportActivity_V1": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#CrmSfdcTestImportActivity_V1",
+            "input": {
+                "message": "CrmSfdcTestImportActivity_V1In",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "inActivity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "CrmSfdcTestImportActivity_V1"
+            },
+            "output": {
+                "message": "CrmSfdcTestImportActivity_V1Out",
+                "parameters": [],
+                "element": "CrmSfdcTestImportActivity_V1Response"
+            }
+        },
+        "SetCrmDataMgtImportExtension": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SetCrmDataMgtImportExtension",
+            "input": {
+                "message": "SetCrmDataMgtImportExtensionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "inActivity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtImportExtension"
+            },
+            "output": {
+                "message": "SetCrmDataMgtImportExtensionOut",
+                "parameters": [
+                    {
+                        "name": "outActivity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "infoMsg",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "errorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtImportExtensionResponse"
+            }
+        },
+        "SetCrmDataMgtExportExtension": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SetCrmDataMgtExportExtension",
+            "input": {
+                "message": "SetCrmDataMgtExportExtensionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "inActivity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "targetSchema",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtExportExtension"
+            },
+            "output": {
+                "message": "SetCrmDataMgtExportExtensionOut",
+                "parameters": [
+                    {
+                        "name": "outActivity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "infoMsg",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "errorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtExportExtensionResponse"
+            }
+        },
+        "SetCrmDataMgtRemotelyDeletedExtension": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SetCrmDataMgtRemotelyDeletedExtension",
+            "input": {
+                "message": "SetCrmDataMgtRemotelyDeletedExtensionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "inActivity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtRemotelyDeletedExtension"
+            },
+            "output": {
+                "message": "SetCrmDataMgtRemotelyDeletedExtensionOut",
+                "parameters": [
+                    {
+                        "name": "outActivity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "errorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtRemotelyDeletedExtensionResponse"
+            }
+        },
+        "SetCrmDataMgtDeleteRemoteExtension": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SetCrmDataMgtDeleteRemoteExtension",
+            "input": {
+                "message": "SetCrmDataMgtDeleteRemoteExtensionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "inActivity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "targetSchema",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtDeleteRemoteExtension"
+            },
+            "output": {
+                "message": "SetCrmDataMgtDeleteRemoteExtensionOut",
+                "parameters": [
+                    {
+                        "name": "outActivity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "errorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SetCrmDataMgtDeleteRemoteExtensionResponse"
+            }
+        },
+        "SetWebexImportExtension": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#SetWebexImportExtension",
+            "input": {
+                "message": "SetWebexImportExtensionIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "inActivity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "SetWebexImportExtension"
+            },
+            "output": {
+                "message": "SetWebexImportExtensionOut",
+                "parameters": [
+                    {
+                        "name": "outActivity",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "errorMsg",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "SetWebexImportExtensionResponse"
+            }
+        },
+        "readSurveySchema": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#readSurveySchema",
+            "input": {
+                "message": "readSurveySchemaIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "activity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "readSurveySchema"
+            },
+            "output": {
+                "message": "readSurveySchemaOut",
+                "parameters": [
+                    {
+                        "name": "enrichedActivity",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "readSurveySchemaResponse"
+            }
+        },
+        "describeWSDL": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#describeWSDL",
+            "input": {
+                "message": "describeWSDLIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "wdslURL",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "element": "describeWSDL"
+            },
+            "output": {
+                "message": "describeWSDLOut",
+                "parameters": [
+                    {
+                        "name": "simplifiedDescription",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "describeWSDLResponse"
+            }
+        },
+        "generateSOAPCode": {
+            "kind": "static",
+            "soapAction": "xtk:workflow#generateSOAPCode",
+            "input": {
+                "message": "generateSOAPCodeIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "apiCallDescription",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "generateSOAPCode"
+            },
+            "output": {
+                "message": "generateSOAPCodeOut",
+                "parameters": [
+                    {
+                        "name": "apiCalls",
+                        "type": "Element",
+                        "required": true
+                    }
+                ],
+                "element": "generateSOAPCodeResponse"
+            }
+        }
+    }
+}

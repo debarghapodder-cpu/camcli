@@ -1,0 +1,69 @@
+{
+    "schema": "nms:address",
+    "targetNamespace": "urn:nms:address",
+    "namespaces": {
+        "null": "",
+        "s": "http://www.w3.org/2001/XMLSchema",
+        "soap": "http://schemas.xmlsoap.org/wsdl/soap/",
+        "tns": "urn:nms:address",
+        "wsdl": "http://schemas.xmlsoap.org/wsdl/"
+    },
+    "operations": {
+        "GetQuarantines": {
+            "kind": "static",
+            "soapAction": "nms:address#GetQuarantines",
+            "input": {
+                "message": "GetQuarantinesIn",
+                "parameters": [
+                    {
+                        "name": "sessiontoken",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "tmStartDate",
+                        "type": "dateTime",
+                        "required": true
+                    },
+                    {
+                        "name": "strPointerName",
+                        "type": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "lQuarantineCount",
+                        "type": "int",
+                        "required": true
+                    },
+                    {
+                        "name": "tmCallerDate",
+                        "type": "dateTime",
+                        "required": true
+                    }
+                ],
+                "element": "GetQuarantines"
+            },
+            "output": {
+                "message": "GetQuarantinesOut",
+                "parameters": [
+                    {
+                        "name": "pdomResult",
+                        "type": "Element",
+                        "required": true
+                    },
+                    {
+                        "name": "ptmNextDate",
+                        "type": "dateTime",
+                        "required": true
+                    },
+                    {
+                        "name": "pbHasMore",
+                        "type": "boolean",
+                        "required": true
+                    }
+                ],
+                "element": "GetQuarantinesResponse"
+            }
+        }
+    }
+}
