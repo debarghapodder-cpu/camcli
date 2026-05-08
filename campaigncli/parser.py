@@ -1,6 +1,8 @@
 import argparse
 from camSession import AdobeSession
 from camSchema import AdobeSchema
+from camWorkflow import AdobeWorkflow
+from camLogs import AdobeLogs
 import json
 
 def display_soap_methods(args):
@@ -45,4 +47,6 @@ def create_parser():
     # Register session management commands
     AdobeSession().get_cli_commands(subparsers)
     AdobeSchema().get_cli_commands(subparsers)
+    AdobeWorkflow().get_cli_commands(subparsers)
+    AdobeLogs().get_cli_commands(subparsers)
     return parser
